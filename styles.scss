@@ -7,11 +7,9 @@ body {
     margin: 0;
     overflow: hidden;
   }
-  
   nav, .navlinks-container {
     transition: 0.5s;
   }
-  
   nav {
     position: fixed;
     top: 0;
@@ -23,36 +21,39 @@ body {
     height: 100vh;
     z-index: 99;
   }
-  
   .nav-logo {
     display: none;
     width: 135px;
     margin: 20px 0 20px 0;
   }
-  
   .nav-logo img {
     display: block;
     width: 100%;
   }
-  
   .backdrop-transitioning {
     backdrop-filter: none;
   }
-  
   .navlinks-container {
     position: absolute;
-    background-color: white;
+    background: linear-gradient(to bottom, rgb(105, 114, 212), rgb(244, 246, 247)); /*recordar este cambio en modo desktop puede un display none*/
     font-size: 2rem;
     width: 90%;
     height: 90%;
   }
-  
   .navlinks {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 75%;
+  }
+  .yellow {
+    color: $yellow;
+  }
+  .fullyellow {
+    color: $yellow;
+    border: 2px solid $yellow;
+    padding: 2px 5px; 
   }
   .number {
     display: absolute;
@@ -67,33 +68,27 @@ body {
   .nav-transitioning {
     transform: translateY(-100vh);
   }
-  
   .hidden {
     display: none;
     position: absolute;
   }
-  
   .menu-toggle, .menu-close {
     position: absolute;
   }
-  
   .menu-toggle {
     top: 30px;
     right: 5%;
     font-size: 30px;
   }
-  
   .menu-close {
     top: calc(5vh + 25px);
     right: calc(5vw + 5%);
     font-size: 30px;
   }
-  
   a {
     color: $darkblack;
     transition: box-shadow 0.3s;
   }
-  
   header {
     display: flex;
     justify-content: center;
@@ -101,14 +96,12 @@ body {
     width: 100%;
     height: 300px;
   }
-  
   .logo {
     width: 40%;
     max-width: 250px;
     margin: auto;
     margin-bottom: 170px;
   }
-  
   .logo img {
     display: block;
     width: 100%;
@@ -116,15 +109,12 @@ body {
   .background {
     margin: 0;
     display: table;
-
 .container {
     display: table-cell;
     vertical-align: bottom;
     padding-bottom: 0px;
     width: 100%;
-
     h1 {
-        
         color: $offwhite;
         font-family: $font-title;
         font-size: 3rem;
@@ -151,11 +141,15 @@ body {
   padding-top: 55px;
 }
 #title2 {
-    color: $darkblack;
+    color: rgb(128, 128, 128);
     font-size: 20px;
     padding: 20px;
     background-color: $whitepure;
     margin: 0;
+    .bold {
+      font-weight: bold;
+      color: black
+    }
 }
 .color1 {
     color: transparent;
@@ -178,10 +172,6 @@ body {
             height: 1px; 
             background-color: $yellow;
 }
-.jumbotrom {
-@include backImage("https://www.noticiasmaquinaria.com/wp-content/uploads/2023/06/noticias-maquinaria-Finanzauto-entrega-una-excavadora-hidraulica-Cat-6015.jpg");
-}  
-
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
