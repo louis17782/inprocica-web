@@ -172,6 +172,18 @@ body {
             height: 1px; 
             background-color: $yellow;
 }
+.content-section {
+  display: flex;
+}
+.content1 {
+  padding: 40px;
+  margin: 50px;
+  background-color: aquamarine;
+}
+.item1 {
+  right: 0px;
+}
+
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
