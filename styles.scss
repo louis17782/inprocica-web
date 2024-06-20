@@ -5,7 +5,7 @@ body {
     background-color: transparent;
     font-size: 16px;
     margin: 0;
-    overflow: hidden;
+    
   }
   nav, .navlinks-container {
     transition: 0.5s;
@@ -141,11 +141,12 @@ body {
   padding-top: 55px;
 }
 #title2 {
-    color: rgb(128, 128, 128);
+    color: $grissolve;
     font-size: 20px;
     padding: 20px;
     background-color: $whitepure;
     margin: 0;
+    font-family: $font-title;
     .bold {
       font-weight: bold;
       color: black
@@ -172,18 +173,59 @@ body {
             height: 1px; 
             background-color: $yellow;
 }
-.content-section {
-  display: flex;
-}
+
+//*section2*//
 .content1 {
-  padding: 40px;
-  margin: 50px;
-  background-color: aquamarine;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+}
+.text-content {
+  display: flex;
+  flex-wrap: row;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.content-image {
+  width: 170px;
+  height: auto;
+  padding: 10px;
+  
 }
 .item1 {
-  right: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  color: $grissolve;
+  font-family: $font-title;
+  font-size: 20px;
 }
-
+.h {
+  margin-left: 10px;
+  color: $darkblack;
+  font-family: $font-title;
+}
+.toggle > a {
+  font-size: 20px;
+  color: $offwhite;
+  background-color: $yellow;
+  padding: 10px;
+  border-radius: 25%;
+  font-family: $font-title;
+}
+.toggle {
+  position: absolute;
+  top: 0px;
+  margin-top: 1120px;
+  margin-left: 20px;
+}
+.content-down {
+  position: relative;
+  color: $grissolve;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  bottom: 80px;
+}
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
