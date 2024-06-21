@@ -34,11 +34,12 @@ body {
     backdrop-filter: none;
   }
   .navlinks-container {
-    position: absolute;
-    background: linear-gradient(to bottom, rgb(105, 114, 212), rgb(244, 246, 247)); /*recordar este cambio en modo desktop puede un display none*/
+    position: absolute;  
+    background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54)); /*recordar este cambio en modo desktop puede un display none*/
     font-size: 2rem;
     width: 90%;
     height: 90%;
+    color: $offwhite;
   }
   .navlinks {
     display: flex;
@@ -74,11 +75,15 @@ body {
   }
   .menu-toggle, .menu-close {
     position: absolute;
+    color: $offwhite;
   }
   .menu-toggle {
+    position: fixed;
     top: 30px;
     right: 5%;
     font-size: 30px;
+    padding: 10px;
+    background-color: rgba(16, 16, 70, 0.425);
   }
   .menu-close {
     top: calc(5vh + 25px);
@@ -86,7 +91,7 @@ body {
     font-size: 30px;
   }
   a {
-    color: $darkblack;
+    color: $offwhite;
     transition: box-shadow 0.3s;
   }
   header {
@@ -157,7 +162,7 @@ body {
     font-size: 40px;
     font-weight: bold; 
     -webkit-text-stroke: 1px $yellow; 
-    text-stroke: 1px $yellow;   
+      
 }
 .contenedor {
             position: relative;
@@ -187,10 +192,10 @@ body {
   margin-top: 10px;
 }
 .content-image {
+  display: none;
   width: 170px;
   height: auto;
   padding: 10px;
-  z-index: -1;
 }
 .item1 {
   margin: 0px;
