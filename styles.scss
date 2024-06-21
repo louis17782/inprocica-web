@@ -227,15 +227,15 @@ body {
   bottom: 80px;
 }
 //*section3*//
-.content2 {
+.told {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
-.text-content2 {
+.told {
 display: flex;
 flex-direction: column;
-margin-left: 0px;
-margin-top: 0px;
+padding: 40px;
+background-color: rgba(16, 16, 70, 0.425);
 }
 .item2 {
 margin: 0px;
@@ -243,10 +243,18 @@ color: $offwhite;
 font-family: $font-title;
 font-size: 20px;
 }
-.b2 {
-margin-left: 0px;
+.item3 {
+margin: 0px;
 color: $offwhite;
 font-family: $font-title;
+font-size: 20px;
+padding-top: 20px;
+}
+.b2 {
+margin-left: 0px;
+color: $yellow;
+font-family: $font-title;
+text-align: center;
 }
 .toggle2 > a {
 font-size: 20px;
@@ -259,13 +267,10 @@ font-family: $font-title;
 .toggle2 {
 position: absolute;
 top: 0px;
+margin-top: 470%;
+margin-left: 80px;
+}
 
-margin-left: 20px;
-}
-.told {
-  padding-right: 0px;
-  background: linear-gradient( rgba(14, 67, 114, 0), rgba(57, 49, 170, 0.7));
-}
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
