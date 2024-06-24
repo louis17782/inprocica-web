@@ -283,6 +283,93 @@ text-align: center;
   font-size: 30px;
 
 }
+/*caorusel*/
+.categories {
+  position: relative;
+  background-color: $solveblue;
+}
+
+.carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 25px;
+  color: $offwhite;
+  height: 100%;
+  z-index: 2;
+}
+
+.arrow-left {
+  left: 2%;
+  color: $darkblue;
+}
+
+.arrow-right {
+  right: 2%;
+  color: $darkblue;
+}
+
+.carousel-frame {
+  display: flex;
+  width: 300%;
+}
+
+.carousel-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% / 3);
+  min-height: 500px;
+  padding: 20px 5%;
+  scroll-snap-align: start;
+}
+
+.carousel-element img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-element-info {
+  text-align: center;
+  font-family: didot;
+}
+.titlegallery {
+  position: absolute;
+  font-size: 2em;
+  font-family: $font-title;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding-top: 40px;
+}
+//section 5
+.content-section {
+  background-color: $darkblue;
+  color: rgb(194, 193, 193);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+}
+.letter {
+  justify-content: space-around;
+  padding: 15px;
+}
+.contact-title {
+  color: $whitepure;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
