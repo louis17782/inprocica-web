@@ -1,111 +1,101 @@
 @use "./assets/sass/abstracts/" as *;
 @use "./assets/sass/styles/reset";
+@use "./assets/sass/layout/header";
 
 body {
-    background-color: transparent;
-    font-size: 16px;
-    margin: 0;
-    
-  }
-  nav, .navlinks-container {
-    transition: 0.5s;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    width: 100vw;
-    height: 100vh;
-    z-index: 99;
-  }
-  .nav-logo {
-    display: none;
-    width: 135px;
-    margin: 20px 0 20px 0;
-  }
-  .nav-logo img {
-    display: block;
-    width: 100%;
-  }
-  .backdrop-transitioning {
-    backdrop-filter: none;
-  }
-  .navlinks-container {
-    position: absolute;
-    background: linear-gradient(to bottom, rgb(105, 114, 212), rgb(244, 246, 247)); /*recordar este cambio en modo desktop puede un display none*/
-    font-size: 2rem;
-    width: 90%;
-    height: 90%;
-  }
-  .navlinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 75%;
-  }
-  .yellow {
-    color: $yellow;
-  }
-  .fullyellow {
-    color: $yellow;
-    border: 2px solid $yellow;
-    padding: 2px 5px; 
-  }
-  .number {
-    display: absolute;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-  .nav, li {
-    margin-top: 40px;
-  }
-  .nav-transitioning {
-    transform: translateY(-100vh);
-  }
-  .hidden {
-    display: none;
-    position: absolute;
-  }
-  .menu-toggle, .menu-close {
-    position: absolute;
-  }
-  .menu-toggle {
-    top: 30px;
-    right: 5%;
-    font-size: 30px;
-  }
-  .menu-close {
-    top: calc(5vh + 25px);
-    right: calc(5vw + 5%);
-    font-size: 30px;
-  }
-  a {
-    color: $darkblack;
-    transition: box-shadow 0.3s;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-  }
-  .logo {
-    width: 40%;
-    max-width: 250px;
-    margin: auto;
-    margin-bottom: 170px;
-  }
-  .logo img {
-    display: block;
-    width: 100%;
-  }
+  background-color: transparent;
+  font-size: 16px;
+  margin: 0;
+  
+}
+nav, .navlinks-container {
+  transition: 0.5s;
+}
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+.nav-logo {
+  display: none;
+  width: 135px;
+  margin: 20px 0 20px 0;
+}
+.nav-logo img {
+  display: block;
+  width: 100%;
+}
+.backdrop-transitioning {
+  backdrop-filter: none;
+}
+.navlinks-container {
+  position: absolute;  
+  background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54)); /*recordar este cambio en modo desktop puede un display none*/
+  font-size: 2rem;
+  width: 90%;
+  height: 90%;
+  color: $offwhite;
+}
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75%;
+}
+.yellow {
+  color: $yellow;
+}
+.fullyellow {
+  color: $yellow;
+  border: 2px solid $yellow;
+  padding: 2px 5px; 
+}
+.number {
+  display: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.nav, li {
+  margin-top: 40px;
+}
+.nav-transitioning {
+  transform: translateY(-100vh);
+}
+.hidden {
+  display: none;
+  position: absolute;
+}
+.menu-toggle, .menu-close {
+  position: absolute;
+  color: $offwhite;
+}
+.menu-toggle {
+  position: fixed;
+  top: 30px;
+  right: 5%;
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgba(16, 16, 70, 0.425);
+}
+.menu-close {
+  top: calc(5vh + 25px);
+  right: calc(5vw + 5%);
+  font-size: 30px;
+}
+a {
+  color: $offwhite;
+  transition: box-shadow 0.3s;
+}
+
   .background {
     margin: 0;
     display: table;
@@ -147,6 +137,9 @@ body {
     background-color: $whitepure;
     margin: 0;
     font-family: $font-title;
+    word-spacing: 0.25em;
+  
+
     .bold {
       font-weight: bold;
       color: black
@@ -157,7 +150,7 @@ body {
     font-size: 40px;
     font-weight: bold; 
     -webkit-text-stroke: 1px $yellow; 
-    text-stroke: 1px $yellow;   
+      
 }
 .contenedor {
             position: relative;
@@ -177,78 +170,75 @@ body {
 //*section2*//
 .content1 {
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
 }
-.text-content {
-  display: flex;
-  flex-wrap: row;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-.content-image {
-  width: 170px;
-  height: auto;
-  padding: 10px;
-  z-index: -1;
-}
 .item1 {
-  margin: 0px;
-  margin-left: 10px;
-  color: $grissolve;
+  padding-bottom: 20px;
+  color: $offwhite;
   font-family: $font-title;
-  font-size: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
+  line-height: 1.5em;
 }
 .h {
-  margin-left: 10px;
+  text-align: center;
   color: $darkblack;
   font-family: $font-title;
+  font-size: 2rem;
 }
-.toggle > a {
+.bottom-primary > a {
   font-size: 20px;
-  color: $offwhite;
+  color: $darkblack;
   background-color: $yellow;
   padding: 10px;
-  border-radius: 25%;
+  border-radius: 40px;
   font-family: $font-title;
 }
-.toggle {
-  position: absolute;
-  top: 0px;
-  margin-top: 1120px;
-  margin-left: 20px;
+.bottom-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 .content-down {
   position: relative;
   color: $grissolve;
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   text-align: center;
-  bottom: 80px;
+  bottom: 30px;
+  line-height: 1.5em;
+  word-spacing: 0.25em;
+  font-family: $font-text;
 }
 //*section3*//
 .told {
   display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: rgba(16, 16, 70, 0.425);
   gap: 30px;
-}
-.told {
-display: flex;
-flex-direction: column;
-padding: 40px;
-background-color: rgba(16, 16, 70, 0.425);
 }
 .item2 {
 margin: 0px;
 color: $offwhite;
-font-family: $font-title;
 font-size: 20px;
+word-spacing: 0.25em;
+font-family: $font-text;
 }
 .item3 {
 margin: 0px;
 color: $offwhite;
-font-family: $font-title;
 font-size: 20px;
 padding-top: 20px;
+word-spacing: 0.25em;
+font-family: $font-text;
 }
 .b2 {
 margin-left: 0px;
@@ -256,21 +246,138 @@ color: $yellow;
 font-family: $font-title;
 text-align: center;
 }
-.toggle2 > a {
-font-size: 20px;
-color: $offwhite;
-background-color: $yellow;
-padding: 10px;
-border-radius: 25%;
-font-family: $font-title;
+.bottom-secundary > a {
+  font-size: 20px;
+  color: $darkblack;
+  background-color: $yellow;
+  padding: 10px;
+  border-radius: 40px;
+  font-family: $font-title;
 }
-.toggle2 {
-position: absolute;
-top: 0px;
-margin-top: 470%;
-margin-left: 80px;
+.bottom-secundary {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+/* section4 */
+#about-content {
+  background-color: $darkblue;
+  padding: 30px;
+}
+.about {
+  display: block;
+  justify-content: center;
+   .about-title {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2em;
+    font-family: $font-title;
+    color: $offwhite;
+   }
+   .about-text {
+    font-size: 1.3em;
+    font-family: $font-text;
+    padding-bottom: 30px;
+    color: $offwhite;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+#icon-primary {
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 5px;
+  font-size: 30px;
+
+}
+/*caorusel*/
+.categories {
+  position: relative;
+  background-color: $solveblue;
 }
 
+.carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 25px;
+  color: $offwhite;
+  height: 100%;
+  z-index: 2;
+}
+
+.arrow-left {
+  left: 2%;
+  color: $darkblue;
+}
+
+.arrow-right {
+  right: 2%;
+  color: $darkblue;
+}
+
+.carousel-frame {
+  display: flex;
+  width: 300%;
+}
+
+.carousel-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% / 3);
+  min-height: 500px;
+  padding: 20px 5%;
+  scroll-snap-align: start;
+}
+
+.carousel-element img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-element-info {
+  text-align: center;
+  font-family: didot;
+}
+.titlegallery {
+  position: absolute;
+  font-size: 2em;
+  font-family: $font-title;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding-top: 40px;
+}
+//section 5
+.content-section {
+  background-color: $darkblue;
+  color: rgb(194, 193, 193);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+}
+.letter {
+  justify-content: space-around;
+  padding: 15px;
+}
+.contact-title {
+  color: $whitepure;
+  font-size: 1.2em;
+  padding-top: 20px;
+}
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
