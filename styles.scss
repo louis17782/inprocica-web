@@ -1,6 +1,7 @@
-@use "./assets/sass/abstracts/" as *;
+@use "./assets/sass/abstracts" as *;
 @use "./assets/sass/styles/reset";
 @use "./assets/sass/layout/header";
+@use "./assets/sass/styles/backgrounds";
 
 body {
   background-color: transparent;
