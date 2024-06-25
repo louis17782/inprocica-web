@@ -1,6 +1,6 @@
 @use "./assets/sass/abstracts/" as *;
 @use "./assets/sass/styles/reset";
-@use "./assets/sass/layout/header.scss";
+@use "./assets/sass/layout/header";
 
 body {
   background-color: transparent;
@@ -137,6 +137,8 @@ a {
     background-color: $whitepure;
     margin: 0;
     font-family: $font-title;
+    word-spacing: 0.25em;
+  
 
     .bold {
       font-weight: bold;
@@ -181,6 +183,7 @@ a {
   text-align: center;
   margin: 30px;
   padding: 20px;
+  line-height: 1.5em;
 }
 .h {
   text-align: center;
@@ -206,10 +209,13 @@ a {
 .content-down {
   position: relative;
   color: $grissolve;
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   text-align: center;
   bottom: 30px;
+  line-height: 1.5em;
+  word-spacing: 0.25em;
+  font-family: $font-text;
 }
 //*section3*//
 .told {
@@ -222,15 +228,17 @@ a {
 .item2 {
 margin: 0px;
 color: $offwhite;
-font-family: $font-title;
 font-size: 20px;
+word-spacing: 0.25em;
+font-family: $font-text;
 }
 .item3 {
 margin: 0px;
 color: $offwhite;
-font-family: $font-title;
 font-size: 20px;
 padding-top: 20px;
+word-spacing: 0.25em;
+font-family: $font-text;
 }
 .b2 {
 margin-left: 0px;
@@ -367,7 +375,7 @@ text-align: center;
 }
 .contact-title {
   color: $whitepure;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding-top: 20px;
 }
   /* Start of media queries */
