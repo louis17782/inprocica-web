@@ -449,7 +449,7 @@ a {
 
 .carousel-frame {
   display: flex;
-  width: 300%;
+  width: 600%;
 }
 
 .carousel-element {
@@ -458,9 +458,9 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 33.3333333333%;
+  width: 16.6666666667%;
   min-height: 500px;
-  padding: 20px 5%;
+  padding: 20px 2%;
   scroll-snap-align: start;
 }
 

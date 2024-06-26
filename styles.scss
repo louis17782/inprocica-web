@@ -333,7 +333,7 @@ text-align: center;
 
 .carousel-frame {
   display: flex;
-  width: 300%;
+  width: 600%;
 }
 
 .carousel-element {
@@ -342,9 +342,9 @@ text-align: center;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: calc(100% / 3);
+  width: calc(100% / 6);
   min-height: 500px;
-  padding: 20px 5%;
+  padding: 20px 2%;
   scroll-snap-align: start;
 }
 
