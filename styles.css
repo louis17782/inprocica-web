@@ -525,7 +525,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 .content-footer .copy {
   color: rgb(128, 128, 128);
