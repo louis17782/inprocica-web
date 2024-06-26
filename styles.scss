@@ -28,17 +28,17 @@ nav {
   width: 135px;
   margin: 20px 0 20px 0;
 }
-.nav-logo img {
+/*.nav-logo img {
   display: block;
   width: 100%;
-}
+}*/
 .backdrop-transitioning {
   backdrop-filter: none;
 }
 .navlinks-container {
   position: absolute;  
   background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54)); /*recordar este cambio en modo desktop puede un display none*/
-  font-size: 2rem;
+  font-size: 1.3rem;
   width: 90%;
   height: 90%;
   color: $offwhite;
@@ -108,16 +108,18 @@ a {
     h1 {
         color: $offwhite;
         font-family: $font-title;
-        font-size: 3rem;
-        margin-bottom: 0;
-        padding-left: 10%;
-        padding-bottom: 50%;
+        font-size: 2rem;
+        margin-left: 10%;
+        margin-bottom: 60px;
+        margin-right: 10%;
+        text-transform: uppercase;
     }
     p {
         color: $offwhite;
         font-family: $font-title;
         font-size: 1.5rem;
         padding-left: 10%;
+        margin-bottom: 15px;
     }
 }
 }
@@ -167,7 +169,12 @@ a {
             height: 1px; 
             background-color: $yellow;
 }
-
+.logo {
+  width: 250px;
+}
+.logo2 {
+  width: 200px;
+}
 //*section2*//
 .content1 {
         display: flex;
@@ -369,16 +376,41 @@ text-align: center;
   text-align: center;
   padding: 30px;
   font-size: 1.2em;
+  word-spacing: 0.15em;
+  line-height: 1.5em;
+  font-family: $font-text;
 }
 .letter {
   justify-content: space-around;
-  padding: 15px;
+  padding: 1px;
 }
 .contact-title {
   color: $whitepure;
   font-size: 1.2em;
-  padding-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
+.contact-details {
+  font-size: 30px;
+  color: $grissolve;
+  margin-left: 10px;
+}
+footer {
+  background-color: $bluestrong;
+  padding: 20px;
+}
+.content-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .copy {
+    color: $grissolve;
+  }
+  .content-politic {
+    color: $grissolve;
+  }
+}
+
   /* Start of media queries */
   @include media(1024px)  {
     h1 {
