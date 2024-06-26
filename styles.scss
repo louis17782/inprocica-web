@@ -403,12 +403,16 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 1em;
   .copy {
     color: $grissolve;
   }
   .content-politic {
     color: $grissolve;
   }
+}
+.info {
+  margin-bottom: 35px;
 }
 
   /* Start of media queries */

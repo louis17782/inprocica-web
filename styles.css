@@ -525,12 +525,17 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 1em;
 }
 .content-footer .copy {
   color: rgb(128, 128, 128);
 }
 .content-footer .content-politic {
   color: rgb(128, 128, 128);
+}
+
+.info {
+  margin-bottom: 35px;
 }
 
 /* Start of media queries */
