@@ -24,23 +24,25 @@ function hideMenu() {
   }, 500)
 };
 function moveCarouselRight() {
-  if (window.innerWidth >= 1024) {
     const carousel = document.getElementById('carousel');
     const currentPosition = carousel.classList.item(1);
 
     if (currentPosition === 'carr-pos-1') carousel.classList.replace('carr-pos-1', 'carr-pos-2');
-    if (currentPosition === 'carr-pos-2') carousel.classList.replace('carr-pos-2', 'carr-pos-3');
-    if (currentPosition === 'carr-pos-3') carousel.classList.replace('carr-pos-3', 'carr-pos-1');
-  }
+   else if (currentPosition === 'carr-pos-2') carousel.classList.replace('carr-pos-2', 'carr-pos-3');
+   else if (currentPosition === 'carr-pos-3') carousel.classList.replace('carr-pos-3', 'carr-pos-4');
+   else if (currentPosition === 'carr-pos-4') carousel.classList.replace('carr-pos-4', 'carr-pos-5');
+   else if (currentPosition === 'carr-pos-5') carousel.classList.replace('carr-pos-5', 'carr-pos-6');
+   else if (currentPosition === 'carr-pos-6') carousel.classList.replace('carr-pos-6', 'carr-pos-1');
 }
 
 function moveCarouselLeft() {
-  if (window.innerWidth >= 1024) {
     const carousel = document.getElementById('carousel');
     const currentPosition = carousel.classList.item(1);
 
-    if (currentPosition === 'carr-pos-1') carousel.classList.replace('carr-pos-1', 'carr-pos-3');
-    if (currentPosition === 'carr-pos-2') carousel.classList.replace('carr-pos-2', 'carr-pos-1');
-    if (currentPosition === 'carr-pos-3') carousel.classList.replace('carr-pos-3', 'carr-pos-2');
-  }
+    if (currentPosition === 'carr-pos-1') carousel.classList.replace('carr-pos-1', 'carr-pos-6');
+   else if (currentPosition === 'carr-pos-2') carousel.classList.replace('carr-pos-2', 'carr-pos-1');
+   else if (currentPosition === 'carr-pos-3') carousel.classList.replace('carr-pos-3', 'carr-pos-2');
+   else if (currentPosition === 'carr-pos-4') carousel.classList.replace('carr-pos-4', 'carr-pos-3');
+   else if (currentPosition === 'carr-pos-5') carousel.classList.replace('carr-pos-5', 'carr-pos-4');
+   else if (currentPosition === 'carr-pos-6') carousel.classList.replace('carr-pos-6', 'carr-pos-5');
 }
