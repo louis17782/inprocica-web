@@ -25,8 +25,6 @@ nav {
 }
 .nav-logo {
   display: none;
-  width: 135px;
-  margin: 20px 0 20px 0;
 }
 /*.nav-logo img {
   display: block;
@@ -37,7 +35,7 @@ nav {
 }
 .navlinks-container {
   position: absolute;  
-  background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54)); /*recordar este cambio en modo desktop puede un display none*/
+  background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54));
   font-size: 1.3rem;
   width: 90%;
   height: 90%;
@@ -97,7 +95,7 @@ a {
   transition: box-shadow 0.3s;
 }
 
-  .background {
+.background {
     margin: 0;
     display: table;
 .container {
@@ -105,6 +103,7 @@ a {
     vertical-align: bottom;
     padding-bottom: 0px;
     width: 100%;
+    height: auto;
     h1 {
         color: $offwhite;
         font-family: $font-title;
@@ -163,7 +162,7 @@ a {
 }
 .linea {
     position: absolute;
-            top: 94%;
+            top: 75%;
             left: 1%;
             width: 140px;
             height: 1px; 
@@ -184,12 +183,11 @@ a {
         gap: 10px;
 }
 .item1 {
-  padding-bottom: 20px;
   color: $offwhite;
   font-family: $font-title;
   font-size: 1.5rem;
   text-align: center;
-  margin: 30px;
+  margin: 15px;
   padding: 20px;
   line-height: 1.5em;
 }
@@ -226,7 +224,7 @@ a {
   font-family: $font-text;
 }
 //*section3*//
-.told {
+.section-oil {
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -269,6 +267,7 @@ text-align: center;
 }
 /* section4 */
 #about-content {
+  background: linear-gradient(to bottom, rgba(0,.9,.9,.9), rgba(0,0,0,.1));
   background-color: $darkblue;
   padding: 30px;
 }
@@ -316,9 +315,8 @@ text-align: center;
   align-items: center;
   padding: 15px;
   font-size: 25px;
-  color: $offwhite;
   height: 100%;
-  z-index: 2;
+  z-index: 99;
 }
 
 .arrow-left {
@@ -361,10 +359,9 @@ text-align: center;
 .titlegallery {
   position: absolute;
   font-size: 2em;
-  font-family: $font-title;
   justify-content: center;
   margin-left: 30px;
-  margin-right: 40px;
+  margin-right: 40px; //volver a revisar centrado
   padding-top: 40px;
 }
 //section 5
@@ -417,10 +414,6 @@ footer {
 
   /* Start of media queries */
   @include media(1024px)  {
-    h1 {
-      font-size: 1rem;
-      text-align: center;
-    }
     
     nav, .backdrop-transitioning {
       justify-content: flex-end;
@@ -446,8 +439,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    margin-right: 30px;
+    
     }
     .nav-transitioning {
       transform: none;
@@ -463,21 +456,157 @@ footer {
     .navlinks-container {
       justify-content: flex-end;
       background-color: transparent;
+      background: none;
     }
   
     .logo {
-      height: 10px;
+      height: 0px;
       aspect-ratio: 1;
-      margin-left: 30px;
+      margin-left: 0px;
       display: flex;
     }
-  
     .nav-logo {
       display: block;
       margin-top: 0;
       margin-right: auto;
     }
-    
+    .nav-logo img {
+      display: block;
+      width: 90%;
+    }
+    .fa-solid {
+      position: absolute;
+      color: $yellow;
+    }
+    .number2 {
+      margin-left: 30px;
+    }
+    .container {
+      margin: auto;
+      height: auto;
+      #zise {
+        font-size: 3em;
+        padding-right: 30%;
+        padding-bottom: 15%;
+      }
+    }
+    #title2 {
+      color: $grissolve;
+      font-size: 30px;
+      padding: 125px;
+      background-color: $whitepure;
+      font-family: $font-title;
+      word-spacing: 0.25em;
+    }
+    #jumbotrom {
+      height: 170%;
+    }
+    #title1 {
+      font-size: 80px;
+      .color1 {
+       font-size: 150%;
+       padding-left: 100px;
+       margin-right: 130px;
+      }
+    }
+.linea {
+position: absolute;
+      top: 90%;
+      left: 0%;
+      width: 30%;
+      height: 0.1em; 
+      background-color: $yellow;
+}
+#back {
+      margin-top: 65%;  
+  }
+  .content1 {
+    padding: 100px;
+    h2 {
+      font-size: 3.5em;
+    }
+    p {
+      font-size: 2.5em;
+    }
+  }
+  .content-down {
+    font-size: 1.5em;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  #back2 {
+    padding-left: 170px;
+    padding-right: 60%;
+  }
+  .about {
+    display: flex;
+    padding: 100px;
+     .about-title {
+      font-size: 2em; 
+     }
+     .about-text {
+      font-size: 1.3em;
+      padding-left: 50px;
+      padding-right: 50px;
+      word-spacing: 0.25em;
+    }
+  }
+  #icon-primary {
+    background-color: rgba(80, 80, 141, 0.425);
+    padding: 20px;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -20px;
+    font-size: 30px;
+    border-radius: 50px; 
+  }
+  //carousel
+  .arrow-left, .arrow-right {
+    padding: 15px;
+    font-size: 55px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .arrow-left {
+    left: 2%;
+    color: $offwhite;
+  }
+  
+  .arrow-right {
+    right: 2%;
+    color: white;
+  }
+  
+  .carousel-frame {
+    display: flex;
+    width: 150%;
+  }
+  
+  .carousel-element {
+    display: flex;
+    min-height: 500px;
+    padding: 0px 0%;
+  }
+  
+  .carousel-element img {
+    display: block;
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .carousel-element-info {
+    text-align: center;
+  }
+  .titlegallery {
+    font-size: 2em;
+    align-items: center;
+    text-align: center;
+    margin-left: 45%;
+    padding-top: 20px;
+  }
     /*
     .whatsapp-btn {
       position: fixed;
