@@ -571,22 +571,27 @@ position: absolute;
   }
   
   .arrow-left {
-    left: 2%;
+    left: 0.5%;
     color: $offwhite;
-    background: blue;
-    
+    background: $darkblue;
+    margin-top: 280px;
     width: 50px;
     height: 100px;
   }
   
   .arrow-right {
-    right: 2%;
+    right: 0.5%;
     color: $offwhite;
+    background: $darkblue;
+    margin-top: 280px;
+    width: 50px;
+    height: 100px;
   }
   
   .carousel-frame {
     display: flex;
     width: 150%;
+
   }
   
   .carousel-element {
@@ -597,9 +602,9 @@ position: absolute;
   
   .carousel-element img {
     display: block;
-    width: 60%;
+    width: 75%;
     height: 300px;
-    margin: 0 auto;
+    margin: 40% auto;
   }
   
   .carousel-element-info {

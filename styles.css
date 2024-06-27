@@ -688,15 +688,20 @@ footer {
     z-index: 2;
   }
   .arrow-left {
-    left: 2%;
+    left: 0.5%;
     color: #eee8d6;
-    background: blue;
+    background: #091F44;
+    margin-top: 280px;
     width: 50px;
     height: 100px;
   }
   .arrow-right {
-    right: 2%;
+    right: 0.5%;
     color: #eee8d6;
+    background: #091F44;
+    margin-top: 280px;
+    width: 50px;
+    height: 100px;
   }
   .carousel-frame {
     display: flex;
@@ -709,9 +714,9 @@ footer {
   }
   .carousel-element img {
     display: block;
-    width: 60%;
+    width: 75%;
     height: 300px;
-    margin: 0 auto;
+    margin: 40% auto;
   }
   .carousel-element-info {
     text-align: center;
