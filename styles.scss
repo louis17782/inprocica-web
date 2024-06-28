@@ -581,11 +581,15 @@ position: absolute;
     border-radius: 50px; 
   }
   //carousel
+  .carousel {
+    overflow: hidden;
+  }
   .arrow-left, .arrow-right {
     padding: 15px;
     font-size: 55px;
     height: 100%;
     z-index: 2;
+    cursor: pointer;
   }
   
   .arrow-left {
@@ -608,25 +612,18 @@ position: absolute;
   
   .carousel-frame {
     display: flex;
-    width: 150%;
-
+    width: 350%;
   }
   
   .carousel-element {
     display: flex;
-    min-height: 500px;
     padding: 0px 0%;
   }
-  
   .carousel-element img {
     display: block;
-    width: 75%;
-    height: 300px;
-    margin: 40% auto;
-  }
-  
-  .carousel-element-info {
-    text-align: center;
+    width: 70%;
+    height: 70%;
+    margin: 0% auto;
   }
   .carr-pos-1 {
     transform: translateX(0);
