@@ -46,3 +46,21 @@ function moveCarouselLeft() {
    else if (currentPosition === 'carr-pos-5') carousel.classList.replace('carr-pos-5', 'carr-pos-4');
    else if (currentPosition === 'carr-pos-6') carousel.classList.replace('carr-pos-6', 'carr-pos-5');
 }
+let deletInterval;
+function autoSliding() {
+  deletInterval = setInterval(timer, 2000);
+  function timer() {
+    moveCarouselRight();
+  }
+}
+autoSliding();
+
+const elements = document.querySelectorAll(".carousel-element img");
+elements.forEach(element => {
+  element.addEventListener("mouseover", function(){
+    clearInterval(deletInterval);
+  });
+  element.addEventListener("mouseout", function(){
+    autoSliding();
+  });
+});

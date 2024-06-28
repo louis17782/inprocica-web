@@ -711,38 +711,51 @@ footer {
     padding: 15px;
     font-size: 55px;
     height: 100%;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
   }
   .arrow-left {
-    left: 0.5%;
-    color: #eee8d6;
-    background: #091F44;
+    left: 5%;
+    color: #091F44;
     margin-top: 280px;
     width: 50px;
     height: 100px;
   }
   .arrow-right {
-    right: 0.5%;
-    color: #eee8d6;
-    background: #091F44;
+    right: 5%;
+    color: #091F44;
     margin-top: 280px;
     width: 50px;
     height: 100px;
   }
+  .arrow-right:hover {
+    background-color: #425f91;
+    opacity: 0.5;
+    color: white;
+    transition: 0.7s;
+  }
+  .arrow-left:hover {
+    background-color: #425f91;
+    opacity: 0.5;
+    color: white;
+    transition: 0.7s;
+  }
   .carousel-frame {
     display: flex;
-    width: 350%;
+    width: 650%;
   }
   .carousel-element {
     display: flex;
-    padding: 0px 0%;
+    padding: 0px 2%;
+    margin-right: 100px;
   }
   .carousel-element img {
     display: block;
-    width: 70%;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
     height: 70%;
-    margin: 0% auto;
+    margin: 0 auto;
   }
   .carr-pos-1 {
     transform: translateX(0);
@@ -751,13 +764,13 @@ footer {
     transform: translateX(-16.6666666667%);
   }
   .carr-pos-3 {
-    transform: translateX(-66.6666666667%);
+    transform: translateX(-33.3333333333%);
   }
   .carr-pos-4 {
-    transform: translateX(-75%);
+    transform: translateX(-50%);
   }
   .carr-pos-5 {
-    transform: translateX(-80%);
+    transform: translateX(-66.6666666667%);
   }
   .carr-pos-6 {
     transform: translateX(-83.3333333333%);
@@ -768,6 +781,25 @@ footer {
     text-align: center;
     margin-left: 45%;
     padding-top: 20px;
+  }
+  .dotsContainer {
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .dotsContainer .dot {
+    width: 25px;
+    height: 25px;
+    margin: 30px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .dotsContainer .active {
+    background-color: #FFBA1F;
   }
   /*
   .whatsapp-btn {
