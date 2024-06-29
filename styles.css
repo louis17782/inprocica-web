@@ -85,6 +85,10 @@ header {
   padding-right: 60px;
 }
 
+.logo2 {
+  width: 200px;
+}
+
 body {
   background-color: transparent;
   font-size: 16px;
@@ -272,10 +276,6 @@ a {
 
 .logo {
   width: 250px;
-}
-
-.logo2 {
-  width: 200px;
 }
 
 .content1 {
@@ -497,15 +497,6 @@ a {
   text-align: center;
 }
 
-.titlegallery {
-  position: absolute;
-  font-size: 2em;
-  justify-content: center;
-  margin-left: 30px;
-  margin-right: 40px;
-  padding-top: 40px;
-}
-
 .content-section {
   background-color: #091F44;
   color: rgb(194, 193, 193);
@@ -557,6 +548,28 @@ footer {
 
 .info {
   margin-bottom: 35px;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dotsContainer .dot {
+  width: 25px;
+  height: 25px;
+  margin: 30px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active {
+  background-color: #FFBA1F;
 }
 
 /* Start of media queries */
@@ -774,13 +787,6 @@ footer {
   }
   .carr-pos-6 {
     transform: translateX(-83.3333333333%);
-  }
-  .titlegallery {
-    font-size: 2em;
-    align-items: center;
-    text-align: center;
-    margin-left: 45%;
-    padding-top: 20px;
   }
   .dotsContainer {
     position: absolute;

@@ -2,6 +2,7 @@
 @use "./assets/sass/styles/reset";
 @use "./assets/sass/layout/header";
 @use "./assets/sass/styles/backgrounds";
+@use "./assets/sass/layout/footer.scss";
 
 body {
   background-color: transparent;
@@ -171,9 +172,7 @@ a {
 .logo {
   width: 250px;
 }
-.logo2 {
-  width: 200px;
-}
+
 //*section2*//
 .content1 {
         display: flex;
@@ -374,14 +373,7 @@ text-align: center;
 .carousel-element-info {
   text-align: center;
 }
-.titlegallery {
-  position: absolute;
-  font-size: 2em;
-  justify-content: center;
-  margin-left: 30px;
-  margin-right: 40px; //volver a revisar centrado
-  padding-top: 40px;
-}
+
 //section 5
 .content-section {
   background-color: $darkblue;
@@ -428,6 +420,25 @@ footer {
 }
 .info {
   margin-bottom: 35px;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+.dotsContainer .dot {
+  width: 25px;
+  height: 25px;
+  margin: 30px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: $yellow;
 }
 
   /* Start of media queries */
@@ -656,13 +667,6 @@ position: absolute;
   }
   .carr-pos-6 {
     transform: translateX(calc(-100% * 5 / 6));
-  }
-  .titlegallery {
-    font-size: 2em;
-    align-items: center;
-    text-align: center;
-    margin-left: 45%;
-    padding-top: 20px;
   }
   .dotsContainer {
     position: absolute;
