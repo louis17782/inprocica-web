@@ -8,7 +8,6 @@ body {
   background-color: transparent;
   font-size: 16px;
   margin: 0;
-  
 }
 nav, .navlinks-container {
   transition: 0.5s;
@@ -27,10 +26,6 @@ nav {
 .nav-logo {
   display: none;
 }
-/*.nav-logo img {
-  display: block;
-  width: 100%;
-}*/
 .backdrop-transitioning {
   backdrop-filter: none;
 }
@@ -64,8 +59,8 @@ nav {
   align-items: center;
   text-align: center;
 }
-.nav > li {
-  margin-top: 0px;
+.nav, li {
+  margin-top: 40px;
 }
 .nav-transitioning {
   transform: translateY(-100vh);
@@ -110,8 +105,8 @@ a {
         font-family: $font-title;
         font-size: 2rem;
         margin-left: 10%;
-        margin-bottom: 60px;
         margin-right: 10%;
+        margin-bottom: 50px;
         text-transform: uppercase;
     }
     p {
@@ -119,7 +114,7 @@ a {
         font-family: $font-title;
         font-size: 1.5rem;
         padding-left: 10%;
-        margin-bottom: 15px;
+       
     }
 }
 }
@@ -133,10 +128,11 @@ a {
   color: $offwhite;
   padding-top: 55px;
 }
+
 #title2 {
     color: $grissolve;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     background-color: $whitepure;
     margin: 0;
     font-family: $font-title;
@@ -369,11 +365,6 @@ text-align: center;
 .carr-pos-6 {
   transform: translateX(calc(-100% * 5 / 6));
 }
-
-.carousel-element-info {
-  text-align: center;
-}
-
 //section 5
 .content-section {
   background-color: $darkblue;
@@ -391,6 +382,7 @@ text-align: center;
   justify-content: space-around;
   padding: 1px;
 }
+
 .contact-title {
   color: $whitepure;
   font-size: 1.2em;
@@ -429,8 +421,8 @@ footer {
   transform: translate(-50%);
 }
 .dotsContainer .dot {
-  width: 25px;
-  height: 25px;
+  width: 10px;
+  height: 10px;
   margin: 30px 2px;
   border: 3px solid #bbb;
   border-radius: 50%;
@@ -440,8 +432,43 @@ footer {
 .dotsContainer .active {
   background-color: $yellow;
 }
+ /* Start of media queries */
 
-  /* Start of media queries */
+  @include media(340px) { 
+    #title2 {
+      color: $grissolve;
+      font-size: 1.2em;
+      padding-bottom: 0px;
+    }
+    }
+    @include media(360px) { 
+      #title2 {
+        color: $grissolve;
+        font-size: 20px;
+        padding-bottom: 100px;
+      }
+      }
+      @include media(420px) { 
+        #title2 {
+          color: $grissolve;
+          font-size: 1.5em;
+          padding-bottom: 100px;
+        }
+        }
+        @include media(760px) { 
+          #title2 {
+            color: $grissolve;
+            font-size: 20px;
+            padding-bottom: 10px;
+            background-color: $whitepure;
+          }
+          .linea {
+            display: none;
+            }
+            h1 {
+              margin-bottom: 250px;
+            }
+          }
   @include media(1024px)  {
     
     nav, .backdrop-transitioning {
@@ -497,6 +524,11 @@ footer {
       aspect-ratio: 1;
       margin-left: 0px;
       display: flex;
+    }
+    .logo2 {
+      width: 200px;
+      margin-right: 300px;
+      margin-bottom: -20px;
     }
     .nav-logo {
       display: block;
