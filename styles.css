@@ -87,6 +87,8 @@ header {
 
 .logo2 {
   width: 200px;
+  margin-right: 300px;
+  margin-bottom: -20px;
 }
 
 body {
@@ -158,8 +160,8 @@ nav {
   text-align: center;
 }
 
-.nav, li {
-  margin-top: 40px;
+.nav > li {
+  margin-top: 0px;
 }
 
 .nav-transitioning {
@@ -806,6 +808,22 @@ footer {
   }
   .dotsContainer .active {
     background-color: #FFBA1F;
+  }
+  .content-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .textsection {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .linea2 {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 185px;
+    width: 500px;
+    height: 1px;
+    background-color: #425f91;
   }
   /*
   .whatsapp-btn {

@@ -64,8 +64,8 @@ nav {
   align-items: center;
   text-align: center;
 }
-.nav, li {
-  margin-top: 40px;
+.nav > li {
+  margin-top: 0px;
 }
 .nav-transitioning {
   transform: translateY(-100vh);
@@ -687,6 +687,24 @@ position: absolute;
   .dotsContainer .active {
     background-color: $yellow;
   }
+  //footer
+  .content-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .textsection {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .linea2 {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 185px;
+    width: 500px;
+    height: 1px; 
+    background-color: $bluemedium;
+}
+
     /*
     .whatsapp-btn {
       position: fixed;
