@@ -1,0 +1,1 @@
+This landing page is designed to showcase industrial content through an engaging and interactive interface. It features a variety of buttons for seamless user interaction and a distinctive carousel to highlight key information. Explore the unique design and discover the comprehensive industrial insights we provide
