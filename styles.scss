@@ -4,6 +4,9 @@
 @use "./assets/sass/styles/backgrounds";
 @use "./assets/sass/layout/footer.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: transparent;
   font-size: 16px;
