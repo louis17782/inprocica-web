@@ -155,7 +155,7 @@ nav {
 }
 
 .nav, li {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .nav-transitioning {
@@ -244,7 +244,7 @@ a {
   background-color: #ffffff;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  word-spacing: 0.25em;
+  text-align: justify;
 }
 #title2 .bold {
   font-weight: bold;
@@ -327,18 +327,18 @@ a {
 .item2 {
   margin: 0px;
   color: #eee8d6;
-  font-size: 20px;
-  word-spacing: 0.25em;
+  font-size: 1.2em;
   font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 .item3 {
   margin: 0px;
   color: #eee8d6;
-  font-size: 20px;
+  font-size: 1.2em;
   padding-top: 20px;
-  word-spacing: 0.25em;
   font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 .b2 {
@@ -393,7 +393,7 @@ a {
 
 #icon-primary {
   position: absolute;
-  margin-left: 70px;
+  margin-left: 60px;
   margin-top: 5px;
   font-size: 30px;
   color: #FFBA1F;
@@ -552,6 +552,31 @@ footer {
   background-color: #FFBA1F;
 }
 
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  font-size: 50px;
+  animation: vibrate 7s;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  75% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Start of media queries */
 @media only screen and (width > 1024px) {
   nav, .backdrop-transitioning {
@@ -607,7 +632,7 @@ footer {
   }
   .logo2 {
     width: 200px;
-    margin-right: 300px;
+    margin-right: 400px;
     margin-bottom: -20px;
   }
   .nav-logo {
@@ -691,7 +716,7 @@ footer {
     font-size: 1.3em;
     padding-left: 50px;
     padding-right: 50px;
-    word-spacing: 0.25em;
+    text-align: justify;
   }
   #icon-primary {
     background-color: rgba(80, 80, 141, 0.425);
@@ -799,16 +824,22 @@ footer {
   .textsection {
     padding-left: 150px;
     padding-right: 150px;
+    text-align: left;
   }
-  .linea2 {
-    display: flex;
-    margin-bottom: 30px;
-    margin-left: 185px;
-    width: 500px;
-    height: 1px;
-    background-color: #425f91;
+  .contact-title, a {
+    color: rgb(194, 193, 193);
   }
-  /*
+  .contact {
+    padding-top: 9px;
+    text-align: left;
+  }
+  .copy, .content-politic {
+    font-size: 2em;
+    padding-left: 155px;
+  }
+  .contact-link {
+    padding-right: 50px;
+  }
   .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -820,7 +851,6 @@ footer {
     border-radius: 50%;
     font-size: 70px;
   }
-  */
 }
 
 /*# sourceMappingURL=styles.css.map */
