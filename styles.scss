@@ -93,33 +93,33 @@ a {
   color: $offwhite;
   transition: box-shadow 0.3s;
 }
-.background {
-    margin: 0;
-    display: table;
-    .container {
-    display: table-cell;
-    vertical-align: bottom;
-    padding-bottom: 0px;
-    width: 100%;
-    height: auto;
-    h1 {
-        color: $offwhite;
-        font-family: $font-title;
-        font-size: 2rem;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 0px;
-        text-transform: uppercase;
-    }
-    p {
-        color: $offwhite;
-        font-family: $font-title;
-        font-size: 1.5rem;
-        padding-left: 10%;
+// .background {
+//     margin: 0;
+//     display: table;
+//     .container {
+//     display: table-cell;
+//     vertical-align: bottom;
+//     padding-bottom: 0px;
+//     width: 100%;
+//     height: auto;
+//     h1 {
+//         color: $offwhite;
+//         font-family: $font-title;
+//         font-size: 2rem;
+//         margin-left: 10%;
+//         margin-right: 10%;
+//         margin-bottom: 0px;
+//         text-transform: uppercase;
+//     }
+//     p {
+//         color: $offwhite;
+//         font-family: $font-title;
+//         font-size: 1.5rem;
+//         padding-left: 10%;
        
-    }
-}
-}
+//     }
+// }
+// }
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -446,43 +446,6 @@ footer {
     transform: translateX(0);
   }
 }
- /* Start of media queries */
-
-  // @include media(340px) { 
-  //   #title2 {
-  //     color: $grissolve;
-  //     font-size: 1.2em;
-  //     padding-bottom: 0px;
-  //   }
-  //   }
-  //   @include media(360px) { 
-  //     #title2 {
-  //       color: $grissolve;
-  //       font-size: 20px;
-  //       padding-bottom: 100px;
-  //     }
-  //     }
-  //     @include media(420px) { 
-  //       #title2 {
-  //         color: $grissolve;
-  //         font-size: 1.5em;
-  //         padding-bottom: 100px;
-  //       }
-  //       }
-  //       @include media(760px) { 
-  //         #title2 {
-  //           color: $grissolve;
-  //           font-size: 20px;
-  //           padding-bottom: 10px;
-  //           background-color: $whitepure;
-  //         }
-  //         .linea {
-  //           display: none;
-  //           }
-  //           h1 {
-  //             margin-bottom: 250px;
-  //           }
-  //         }
   @include media(1024px)  {
     
     nav, .backdrop-transitioning {
@@ -593,9 +556,6 @@ position: absolute;
       height: 0.1em; 
       background-color: $yellow;
 }
-#back {
-      margin-top: 65%;  
-  }
   .content1 {
     padding: 100px;
     h2 {
