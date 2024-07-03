@@ -213,7 +213,7 @@ a {
   font-size: 2rem;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 }
 .background .container p {
@@ -325,6 +325,7 @@ a {
   flex-direction: column;
   padding: 40px;
   background-color: rgba(16, 16, 70, 0.425);
+  backdrop-filter: blur(5px);
   gap: 30px;
 }
 
@@ -333,7 +334,6 @@ a {
   color: #eee8d6;
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
-  text-align: justify;
 }
 
 .item3 {
@@ -342,7 +342,6 @@ a {
   font-size: 1.2em;
   padding-top: 20px;
   font-family: "Roboto", sans-serif;
-  text-align: justify;
 }
 
 .b2 {

@@ -108,7 +108,7 @@ a {
         font-size: 2rem;
         margin-left: 10%;
         margin-right: 10%;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
         text-transform: uppercase;
     }
     p {
@@ -215,6 +215,7 @@ a {
   flex-direction: column;
   padding: 40px;
   background-color: rgba(16, 16, 70, 0.425);
+  backdrop-filter: blur(5px);
   gap: 30px;
 }
 .item2 {
@@ -222,7 +223,6 @@ margin: 0px;
 color: $offwhite;
 font-size: 1.2em;
 font-family: $font-text;
-text-align: justify;
 }
 .item3 {
 margin: 0px;
@@ -230,7 +230,6 @@ color: $offwhite;
 font-size: 1.2em;
 padding-top: 20px;
 font-family: $font-text;
-text-align: justify;
 }
 .b2 {
 margin-left: 0px;
