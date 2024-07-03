@@ -1,18 +1,22 @@
-@use "./assets/sass/abstracts/" as *;
+@use "./assets/sass/abstracts" as *;
 @use "./assets/sass/styles/reset";
 @use "./assets/sass/layout/header";
+@use "./assets/sass/styles/backgrounds";
+@use "./assets/sass/layout/footer.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: transparent;
   font-size: 16px;
   margin: 0;
-  
+  padding: 0;
 }
 nav, .navlinks-container {
   transition: 0.5s;
 }
 nav {
-  position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
@@ -24,20 +28,14 @@ nav {
 }
 .nav-logo {
   display: none;
-  width: 135px;
-  margin: 20px 0 20px 0;
-}
-.nav-logo img {
-  display: block;
-  width: 100%;
 }
 .backdrop-transitioning {
   backdrop-filter: none;
 }
 .navlinks-container {
   position: absolute;  
-  background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54)); /*recordar este cambio en modo desktop puede un display none*/
-  font-size: 2rem;
+  background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54));
+  font-size: 1.3rem;
   width: 90%;
   height: 90%;
   color: $offwhite;
@@ -65,7 +63,7 @@ nav {
   text-align: center;
 }
 .nav, li {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .nav-transitioning {
   transform: translateY(-100vh);
@@ -95,41 +93,55 @@ a {
   color: $offwhite;
   transition: box-shadow 0.3s;
 }
-
-  .background {
-    margin: 0;
-    display: table;
-.container {
-    display: table-cell;
-    vertical-align: bottom;
-    padding-bottom: 0px;
-    width: 100%;
-    h1 {
-        color: $offwhite;
-        font-family: $font-title;
-        font-size: 3rem;
-        margin-bottom: 0;
-        padding-left: 10%;
-        padding-bottom: 50%;
-    }
-    p {
-        color: $offwhite;
-        font-family: $font-title;
-        font-size: 1.5rem;
-        padding-left: 10%;
-    }
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  align-items: center;
 }
+
+.background {
+  background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./assets/images/refineria1.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      padding-top: 300px;  
+      h1 {
+          color: $offwhite;
+          font-family: $font-title;
+          font-size: 2rem;
+          margin-right: 10%;
+          margin-bottom: 100px;
+          text-transform: uppercase;
+      }
+      p {
+          color: $offwhite;
+          font-family: $font-title;
+          font-size: 1.5rem;
+         
+         
+      }
+    }
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
 }
 .section2 {
     display: flex;
-}
-.section2 p {
-    margin: 0 10px;
-}
+    
+  }
+ .section2, p {
+    margin: 0px;
+    
+  }
 #title1 {
   color: $offwhite;
-  padding-top: 55px;
+  margin-top: 60px;
+  margin: 40px;
 }
+
 #title2 {
     color: $grissolve;
     font-size: 20px;
@@ -137,9 +149,6 @@ a {
     background-color: $whitepure;
     margin: 0;
     font-family: $font-title;
-    word-spacing: 0.25em;
-  
-
     .bold {
       font-weight: bold;
       color: black
@@ -152,19 +161,9 @@ a {
     -webkit-text-stroke: 1px $yellow; 
       
 }
-.contenedor {
-            position: relative;
-            width: 100%;
-            height: 100px;
-            border: 1px solid $yellow;
-}
-.linea {
-    position: absolute;
-            top: 94%;
-            left: 1%;
-            width: 140px;
-            height: 1px; 
-            background-color: $yellow;
+
+.logo {
+  width: 250px;
 }
 
 //*section2*//
@@ -174,22 +173,24 @@ a {
         justify-content: center;
         align-items: center;
         gap: 10px;
-}
-.item1 {
-  padding-bottom: 20px;
-  color: $offwhite;
-  font-family: $font-title;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 30px;
-  padding: 20px;
-  line-height: 1.5em;
-}
-.h {
-  text-align: center;
-  color: $darkblack;
-  font-family: $font-title;
-  font-size: 2rem;
+        background-color: rgba(16, 16, 70, 0.425);
+        padding: 100px;
+        .item1 {
+          color: $whitepure;
+          font-family: $font-title;
+          font-size: 1.5rem;
+          text-align: center;
+          margin: 15px;
+          padding: 20px;
+          line-height: 1.5em;
+        }
+        h2 {
+          text-align: center;
+          color: $darkblack;
+          margin-top: 30px;
+          font-family: $font-title;
+          font-size: 2rem;
+        }
 }
 .bottom-primary > a {
   font-size: 20px;
@@ -209,35 +210,35 @@ a {
 .content-down {
   position: relative;
   color: $grissolve;
-  font-size: 18px;
+  font-size: 1.5em;
   align-items: center;
   text-align: center;
-  bottom: 30px;
+  margin: 40px;
   line-height: 1.5em;
   word-spacing: 0.25em;
   font-family: $font-text;
 }
 //*section3*//
-.told {
+.section-oil {
   display: flex;
   flex-direction: column;
   padding: 40px;
   background-color: rgba(16, 16, 70, 0.425);
+  backdrop-filter: blur(5px);
   gap: 30px;
+  margin: 40px;
 }
 .item2 {
 margin: 0px;
 color: $offwhite;
-font-size: 20px;
-word-spacing: 0.25em;
+font-size: 1.2em;
 font-family: $font-text;
 }
 .item3 {
 margin: 0px;
 color: $offwhite;
-font-size: 20px;
+font-size: 1.2em;
 padding-top: 20px;
-word-spacing: 0.25em;
 font-family: $font-text;
 }
 .b2 {
@@ -261,6 +262,7 @@ text-align: center;
 }
 /* section4 */
 #about-content {
+  background: linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,.9,.9,.9));
   background-color: $darkblue;
   padding: 30px;
 }
@@ -286,10 +288,10 @@ text-align: center;
 }
 #icon-primary {
   position: absolute;
-  margin-left: 70px;
+  margin-left: 60px;
   margin-top: 5px;
   font-size: 30px;
-
+  color: $yellow;
 }
 /*caorusel*/
 .categories {
@@ -308,9 +310,8 @@ text-align: center;
   align-items: center;
   padding: 15px;
   font-size: 25px;
-  color: $offwhite;
   height: 100%;
-  z-index: 2;
+  z-index: 99;
 }
 
 .arrow-left {
@@ -325,7 +326,7 @@ text-align: center;
 
 .carousel-frame {
   display: flex;
-  width: 300%;
+  width: 600%;
 }
 
 .carousel-element {
@@ -334,9 +335,9 @@ text-align: center;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: calc(100% / 3);
+  width: calc(100% / 6);
   min-height: 500px;
-  padding: 20px 5%;
+  padding: 0px 2%;
   scroll-snap-align: start;
 }
 
@@ -345,45 +346,117 @@ text-align: center;
   width: 100%;
   margin: 0 auto;
 }
-
-.carousel-element-info {
-  text-align: center;
-  font-family: didot;
+.carr-pos-1 {
+  transform: translateX(0);
 }
-.titlegallery {
-  position: absolute;
-  font-size: 2em;
-  font-family: $font-title;
-  justify-content: center;
-  margin-left: 30px;
-  margin-right: 40px;
-  padding-top: 40px;
+
+.carr-pos-2 {
+  transform: translateX(calc(-100% / 6));
+}
+.carr-pos-3 {
+  transform: translateX(calc(-100% * 2 / 6));
+}
+.carr-pos-4 {
+  transform: translateX(calc(-100% * 3 / 6));
+}
+.carr-pos-5 {
+  transform: translateX(calc(-100% * 4 / 6));
+}
+.carr-pos-6 {
+  transform: translateX(calc(-100% * 5 / 6));
 }
 //section 5
 .content-section {
   background-color: $darkblue;
-  color: rgb(194, 193, 193);
+  color: $grisfooter;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px;
   font-size: 1.2em;
+  word-spacing: 0.15em;
+  line-height: 1.5em;
+  font-family: $font-text;
 }
 .letter {
   justify-content: space-around;
-  padding: 15px;
+  padding: 1px;
 }
+
 .contact-title {
   color: $whitepure;
   font-size: 1.2em;
-  padding-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-  /* Start of media queries */
+.contact-details {
+  font-size: 30px;
+  color: $grissolve;
+  margin-left: 10px;
+}
+footer {
+  background-color: $bluestrong;
+  padding: 20px;
+}
+.content-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.7em;
+  .copy {
+    color: $grissolve;
+  }
+  .content-politic {
+    color: $grissolve;
+  }
+}
+.info {
+  margin-bottom: 35px;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+.dotsContainer .dot {
+  width: 10px;
+  height: 10px;
+  margin: 30px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: $yellow;
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  font-size: 50px;
+  animation: vibrate 7s;
+}
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  75% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
   @include media(1024px)  {
-    h1 {
-      font-size: 1rem;
-      text-align: center;
-    }
     
     nav, .backdrop-transitioning {
       justify-content: flex-end;
@@ -409,8 +482,8 @@ text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    margin-right: 30px;
+    
     }
     .nav-transitioning {
       transform: none;
@@ -426,22 +499,228 @@ text-align: center;
     .navlinks-container {
       justify-content: flex-end;
       background-color: transparent;
+      background: none;
+      .fa-solid {
+        position: absolute;
+        color: $yellow;
+      }
     }
   
     .logo {
-      height: 10px;
+      height: 0px;
       aspect-ratio: 1;
-      margin-left: 30px;
+      margin-left: 0px;
       display: flex;
     }
-  
+    .logo2 {
+      width: 200px;
+      margin-right: 400px;
+      margin-bottom: -20px;
+    }
     .nav-logo {
       display: block;
       margin-top: 0;
       margin-right: auto;
     }
+    .nav-logo img {
+      display: block;
+      width: 100%;
+    }
     
-    /*
+    .number2 {
+      margin-left: 30px;
+    }
+    .container {
+      margin: auto;
+      height: auto;
+      #zise {
+        font-size: 3em;
+        padding-right: 30%;
+        padding-bottom: 15%;
+      }
+    }
+    #title2 {
+      color: $grissolve;
+      font-size: 30px;
+      padding: 125px;
+      background-color: $whitepure;
+      font-family: $font-title;
+      word-spacing: 0.25em;
+    }
+    #jumbotrom {
+      height: 170%;
+    }
+    #title1 {
+      font-size: 80px;
+      .color1 {
+       font-size: 150%;
+       padding-left: 100px;
+       margin-right: 130px;
+      }
+    }
+  .content1 {
+    padding: 100px;
+    h2 {
+      font-size: 3.5em;
+    }
+    p {
+      font-size: 2.5em;
+    }
+  }
+  .content-down {
+    font-size: 1.5em;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  #back2 {
+    padding-left: 170px;
+    padding-right: 60%;
+  }
+  .about {
+    display: flex;
+    padding: 100px;
+     .about-title {
+      font-size: 2em; 
+     }
+     .about-text {
+      font-size: 1.3em;
+      padding-left: 50px;
+      padding-right: 50px;
+      text-align: justify;
+    }
+  }
+  #icon-primary {
+    background-color: rgba(80, 80, 141, 0.425);
+    padding: 20px;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -20px;
+    font-size: 30px;
+    border-radius: 50px; 
+  }
+  //carousel
+  .carousel {
+    overflow: hidden;
+  }
+  .arrow-left, .arrow-right {
+    padding: 15px;
+    font-size: 55px;
+    height: 100%;
+    z-index: 4;
+    cursor: pointer;
+  }
+  
+  .arrow-left {
+    left: 5%;
+    color: $darkblue;
+    margin-top: 280px;
+    width: 50px;
+    height: 100px;
+  }
+  
+  .arrow-right {
+    right: 5%;
+    color: $darkblue;
+    margin-top: 280px;
+    width: 50px;
+    height: 100px;
+  }
+  .arrow-right:hover {
+    background-color: $bluemedium;
+    opacity: 0.5;
+    color: white;
+    transition: 0.7s;
+  }
+  .arrow-left:hover {
+    background-color: $bluemedium;
+    opacity: 0.5;
+    color: white;
+    transition: 0.7s;
+  }
+  .carousel-frame {
+    display: flex;
+    width: 650%;
+  }
+  
+  .carousel-element {
+    display: flex;
+    padding: 0px 2%;
+    margin-right: 100px;
+  }
+  .carousel-element img {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 70%;
+    margin: 0 auto;
+    
+  }
+  .carr-pos-1 {
+    transform: translateX(0);
+  }
+  
+  .carr-pos-2 {
+    transform: translateX(calc(-100% / 6));
+  }
+  .carr-pos-3 {
+    transform: translateX(calc(-100% * 2 / 6));
+  }
+  .carr-pos-4 {
+    transform: translateX(calc(-100% * 3 / 6));
+  }
+  .carr-pos-5 {
+    transform: translateX(calc(-100% * 4 / 6));
+  }
+  .carr-pos-6 {
+    transform: translateX(calc(-100% * 5 / 6));
+  }
+  .dotsContainer {
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .dotsContainer .dot {
+    width: 25px;
+    height: 25px;
+    margin: 30px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .dotsContainer .active {
+    background-color: $yellow;
+  }
+  //footer
+  .content-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .textsection {
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: left;
+  }
+
+.contact-title, a {
+  color: $grisfooter;
+}
+.contact {
+  padding-top: 9px;
+  text-align: left;
+}
+.copy, .content-politic {
+  font-size: 2em;
+  padding-left: 155px;
+}
+
+.contact-link {
+  padding-right: 50px;
+}
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -453,7 +732,6 @@ text-align: center;
       border-radius: 50%;
       font-size: 70px;
     }
-    */
     
   }
  
