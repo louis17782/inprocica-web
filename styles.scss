@@ -11,12 +11,12 @@ body {
   background-color: transparent;
   font-size: 16px;
   margin: 0;
+  padding: 0;
 }
 nav, .navlinks-container {
   transition: 0.5s;
 }
 nav {
-  position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
@@ -93,56 +93,62 @@ a {
   color: $offwhite;
   transition: box-shadow 0.3s;
 }
-// .background {
-//     margin: 0;
-//     display: table;
-//     .container {
-//     display: table-cell;
-//     vertical-align: bottom;
-//     padding-bottom: 0px;
-//     width: 100%;
-//     height: auto;
-//     h1 {
-//         color: $offwhite;
-//         font-family: $font-title;
-//         font-size: 2rem;
-//         margin-left: 10%;
-//         margin-right: 10%;
-//         margin-bottom: 0px;
-//         text-transform: uppercase;
-//     }
-//     p {
-//         color: $offwhite;
-//         font-family: $font-title;
-//         font-size: 1.5rem;
-//         padding-left: 10%;
-       
-//     }
-// }
-// }
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+.background {
+  background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./assets/images/refineria1.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      padding-top: 300px;  
+      h1 {
+          color: $offwhite;
+          font-family: $font-title;
+          font-size: 2rem;
+          margin-right: 10%;
+          margin-bottom: 100px;
+          text-transform: uppercase;
+      }
+      p {
+          color: $offwhite;
+          font-family: $font-title;
+          font-size: 1.5rem;
+         
+         
+      }
+    }
 .flex-container {
   display: flex;
   flex-direction: column;
+  margin: 0 40px;
 }
 .section2 {
     display: flex;
-}
-.section2 p {
-    margin: 0 10px;
-}
+    
+  }
+ .section2, p {
+    margin: 0px;
+    
+  }
 #title1 {
   color: $offwhite;
-  padding-top: 55px;
+  margin-top: 60px;
+  margin: 40px;
 }
 
 #title2 {
     color: $grissolve;
     font-size: 20px;
-    padding: 10px;
+    padding: 20px;
     background-color: $whitepure;
     margin: 0;
     font-family: $font-title;
-    text-align: justify;
     .bold {
       font-weight: bold;
       color: black
@@ -167,21 +173,24 @@ a {
         justify-content: center;
         align-items: center;
         gap: 10px;
-}
-.item1 {
-  color: $offwhite;
-  font-family: $font-title;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 15px;
-  padding: 20px;
-  line-height: 1.5em;
-}
-.h {
-  text-align: center;
-  color: $whitepure;
-  font-family: $font-title;
-  font-size: 2rem;
+        background-color: rgba(16, 16, 70, 0.425);
+        padding: 100px;
+        .item1 {
+          color: $whitepure;
+          font-family: $font-title;
+          font-size: 1.5rem;
+          text-align: center;
+          margin: 15px;
+          padding: 20px;
+          line-height: 1.5em;
+        }
+        h2 {
+          text-align: center;
+          color: $darkblack;
+          margin-top: 30px;
+          font-family: $font-title;
+          font-size: 2rem;
+        }
 }
 .bottom-primary > a {
   font-size: 20px;
@@ -201,10 +210,10 @@ a {
 .content-down {
   position: relative;
   color: $grissolve;
-  font-size: 18px;
+  font-size: 1.5em;
   align-items: center;
   text-align: center;
-  bottom: 30px;
+  margin: 40px;
   line-height: 1.5em;
   word-spacing: 0.25em;
   font-family: $font-text;
@@ -217,6 +226,7 @@ a {
   background-color: rgba(16, 16, 70, 0.425);
   backdrop-filter: blur(5px);
   gap: 30px;
+  margin: 40px;
 }
 .item2 {
 margin: 0px;
@@ -548,14 +558,6 @@ footer {
        margin-right: 130px;
       }
     }
-.linea {
-position: absolute;
-      top: 90%;
-      left: 0%;
-      width: 30%;
-      height: 0.1em; 
-      background-color: $yellow;
-}
   .content1 {
     padding: 100px;
     h2 {

@@ -53,8 +53,6 @@ header {
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 120px;
-  padding-left: 40px;
-  padding-right: 60px;
 }
 
 .logo2 {
@@ -69,6 +67,7 @@ body {
   background-color: transparent;
   font-size: 16px;
   margin: 0;
+  padding: 0;
 }
 
 nav, .navlinks-container {
@@ -76,7 +75,6 @@ nav, .navlinks-container {
 }
 
 nav {
-  position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
@@ -168,32 +166,62 @@ a {
   transition: box-shadow 0.3s;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+.background {
+  background-image: linear-gradient(to bottom, rgba(0, 1, 1, 0.9), rgba(0, 0, 0, 0.5)), url("./assets/images/refineria1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 300px;
+}
+.background h1 {
+  color: #eee8d6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+.background p {
+  color: #eee8d6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
+  margin: 0 40px;
 }
 
 .section2 {
   display: flex;
 }
 
-.section2 p {
-  margin: 0 10px;
+.section2, p {
+  margin: 0px;
 }
 
 #title1 {
   color: #eee8d6;
-  padding-top: 55px;
+  margin-top: 60px;
+  margin: 40px;
 }
 
 #title2 {
   color: rgb(128, 128, 128);
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
   background-color: #ffffff;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
 }
 #title2 .bold {
   font-weight: bold;
@@ -217,10 +245,11 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-color: rgba(16, 16, 70, 0.425);
+  padding: 100px;
 }
-
-.item1 {
-  color: #eee8d6;
+.content1 .item1 {
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -228,10 +257,10 @@ a {
   padding: 20px;
   line-height: 1.5em;
 }
-
-.h {
+.content1 h2 {
   text-align: center;
-  color: #ffffff;
+  color: #1D1E21;
+  margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
@@ -256,10 +285,10 @@ a {
 .content-down {
   position: relative;
   color: rgb(128, 128, 128);
-  font-size: 18px;
+  font-size: 1.5em;
   align-items: center;
   text-align: center;
-  bottom: 30px;
+  margin: 40px;
   line-height: 1.5em;
   word-spacing: 0.25em;
   font-family: "Roboto", sans-serif;
@@ -272,6 +301,7 @@ a {
   background-color: rgba(16, 16, 70, 0.425);
   backdrop-filter: blur(5px);
   gap: 30px;
+  margin: 40px;
 }
 
 .item2 {
@@ -621,14 +651,6 @@ footer {
     font-size: 150%;
     padding-left: 100px;
     margin-right: 130px;
-  }
-  .linea {
-    position: absolute;
-    top: 90%;
-    left: 0%;
-    width: 30%;
-    height: 0.1em;
-    background-color: #FFBA1F;
   }
   .content1 {
     padding: 100px;
