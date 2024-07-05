@@ -119,8 +119,6 @@ header {
           color: $offwhite;
           font-family: $font-title;
           font-size: 1.5rem;
-         
-         
       }
     }
 .flex-container {
@@ -175,23 +173,23 @@ header {
         gap: 10px;
         background-color: rgba(16, 16, 70, 0.425);
         padding: 100px;
-        .item1 {
-          color: $whitepure;
-          font-family: $font-title;
-          font-size: 1.5rem;
-          text-align: center;
-          margin: 15px;
-          padding: 20px;
-          line-height: 1.5em;
-        }
-        h2 {
-          text-align: center;
-          color: $darkblack;
-          margin-top: 30px;
-          font-family: $font-title;
-          font-size: 2rem;
-        }
-}
+      }
+      .item1 {
+        color: $whitepure;
+        font-family: $font-title;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 15px;
+        padding: 20px;
+        line-height: 1.5em;
+      }
+      h2 {
+        text-align: center;
+        color: $whitepure;
+        margin-top: 30px;
+        font-family: $font-title;
+        font-size: 2rem;
+      }
 .bottom-primary > a {
   font-size: 20px;
   color: $darkblack;
@@ -266,32 +264,32 @@ text-align: center;
   background-color: $darkblue;
   padding: 30px;
 }
-.about {
-  display: block;
+.mision, .vision {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-   .about-title {
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 2em;
-    font-family: $font-title;
-    color: $offwhite;
-   }
-   .about-text {
-    font-size: 1.3em;
-    font-family: $font-text;
-    padding-bottom: 30px;
-    color: $offwhite;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
 }
-#icon-primary {
-  position: absolute;
-  margin-left: 60px;
-  margin-top: 5px;
-  font-size: 30px;
+ h4 {
+ align-items: center;
+ text-align: center;
+ padding-bottom: 20px;
+ font-size: 2em;
+ font-family: $font-title;
+ color: $offwhite;
+}
+.misiontext {
+  font-size: 1.3em;
+  font-family: $font-text;
+  padding-bottom: 30px;
+  color: $offwhite;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#icon {
+  aspect-ratio: 1;
   color: $yellow;
+  font-size: 30px;
+  margin-left: 70px;
 }
 /*caorusel*/
 .categories {
@@ -467,13 +465,16 @@ footer {
     header {
       display: none;
     }
+    .background {
+          padding-top: 300px;
+        }
     .navlinks{
       justify-content: space-evenly;
       flex-direction: row;
       letter-spacing: 2px;
       font-size: 1.5rem;
       height: 100%;
-      margin-right: 10%;
+      margin-right: 5%;
     }
     .nav, li {
       margin-right: 100px;
@@ -485,11 +486,17 @@ footer {
     margin-right: 30px;
     
     }
+  h1 {
+      margin-top: 50px;
+  }
+  p {
+    margin-top: 90px;
+  }
     .nav-transitioning {
       transform: none;
     }
     .hidden {
-      position: static;
+      position: absolute;
       display: flex;
     }
     
@@ -559,17 +566,18 @@ footer {
       }
     }
   .content1 {
-    padding: 100px;
+    padding: 150px;
     h2 {
       font-size: 3.5em;
     }
     p {
-      font-size: 2.5em;
+      font-size: 1.5em;
+      padding-left: 150px;
+      padding-right: 150px;
     }
   }
   .content-down {
     font-size: 1.5em;
-    padding: 30px;
     padding-left: 150px;
     padding-right: 150px;
   }
@@ -589,15 +597,6 @@ footer {
       padding-right: 50px;
       text-align: justify;
     }
-  }
-  #icon-primary {
-    background-color: rgba(80, 80, 141, 0.425);
-    padding: 20px;
-    position: absolute;
-    margin-left: 190px;
-    margin-top: -20px;
-    font-size: 30px;
-    border-radius: 50px; 
   }
   //carousel
   .carousel {
@@ -695,6 +694,18 @@ footer {
   .dotsContainer .active {
     background-color: $yellow;
   }
+  //mision vision
+  
+  // .direction {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+  // h4 {
+  //   font-size: 2em;
+  //   text-align: center;
+  //   justify-content: center;
+  //   align-items: center;
+  //  }  
   //footer
   .content-section {
     display: grid;
