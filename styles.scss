@@ -67,6 +67,7 @@ nav {
 }
 .nav-transitioning {
   transform: translateY(-100vh);
+  z-index: 20;
 }
 .hidden {
   display: none;
@@ -75,6 +76,7 @@ nav {
 .menu-toggle, .menu-close {
   position: absolute;
   color: $offwhite;
+  
 }
 .menu-toggle {
   position: fixed;
@@ -93,13 +95,14 @@ a {
   color: $offwhite;
   transition: box-shadow 0.3s;
 }
-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  align-items: center;
-}
+// header {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100px;
+//   align-items: center;
+//   z-index: 10;
+// }
 .background {
   background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./assets/images/refineria1.jpg");
       background-repeat: no-repeat;
@@ -163,6 +166,7 @@ header {
 
 .logo {
   width: 250px;
+  
 }
 
 //*section2*//

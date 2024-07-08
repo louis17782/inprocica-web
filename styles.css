@@ -134,6 +134,7 @@ nav {
 
 .nav-transitioning {
   transform: translateY(-100vh);
+  z-index: 20;
 }
 
 .hidden {
@@ -164,14 +165,6 @@ nav {
 a {
   color: #eee8d6;
   transition: box-shadow 0.3s;
-}
-
-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  align-items: center;
 }
 
 .background {
