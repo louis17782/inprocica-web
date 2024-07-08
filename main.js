@@ -108,4 +108,22 @@ dots.forEach((dot, index) => {
       moveCarouselTo(index);
   });
 });
-
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.querySelector('.speaker-btn');
+      const content = document.querySelector('.item1');
+      const span = document.getElementById('morles');
+      const icon = document.getElementById('chevron');
+    
+      btn.addEventListener('click', function () {
+          content.classList.toggle('show');
+          if (content.classList.contains('show')) {
+              span.textContent = 'VER MÁS';
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+          } else {
+              span.textContent = 'VER MENOS';
+              icon.classList.remove('fa-chevron-up');
+              icon.classList.add('fa-chevron-down');
+          }
+      });
+    });
