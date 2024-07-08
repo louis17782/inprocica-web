@@ -23,6 +23,9 @@ function hideMenu() {
     navLinks.classList.replace('nav-transitioning', 'hidden');
   }, 500)
 };
+function closeMenuAfterNavigation() {
+  hideMenu();
+}
 let dots = document.querySelectorAll(' .dot');
 var counter = 0;
 
