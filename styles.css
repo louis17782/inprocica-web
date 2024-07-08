@@ -218,10 +218,12 @@ header {
 #title2 {
   color: rgb(128, 128, 128);
   font-size: 20px;
-  padding: 20px;
+  margin: 5px;
+  padding-top: 15px;
   background-color: #ffffff;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 #title2 .bold {
   font-weight: bold;
