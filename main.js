@@ -108,22 +108,50 @@ dots.forEach((dot, index) => {
       moveCarouselTo(index);
   });
 });
-    document.addEventListener('DOMContentLoaded', function () {
-      const btn = document.querySelector('.speaker-btn');
-      const content = document.querySelector('.item1');
-      const span = document.getElementById('morles');
-      const icon = document.getElementById('chevron');
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.querySelector('.speaker-btn');
+  const content = document.querySelector('.item1');
+  const span = document.getElementById('morles');
+  const icon = document.getElementById('chevron');
+
+  if (window.innerWidth <= 768) { 
+  content.classList.add('show');
+}
     
       btn.addEventListener('click', function () {
-          content.classList.toggle('show');
-          if (content.classList.contains('show')) {
-              span.textContent = 'VER MÁS';
-              icon.classList.remove('fa-chevron-down');
-              icon.classList.add('fa-chevron-up');
+        content.classList.toggle('show');
+        if (content.classList.contains('show')) {
+          span.textContent = 'VER MÁS';
+          icon.classList.add('fa-chevron-down');
+              icon.classList.remove('fa-chevron-up');
           } else {
               span.textContent = 'VER MENOS';
-              icon.classList.remove('fa-chevron-up');
-              icon.classList.add('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+              icon.classList.remove('fa-chevron-down');
           }
       });
     });
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn2= document.querySelector('.speaker-btn2');
+      const content = document.querySelector('.item3');
+      const span = document.getElementById('morles2');
+      const icon = document.getElementById('chevron2');
+    
+      if (window.innerWidth <= 768) { 
+      content.classList.add('show');
+    }
+        
+          btn2.addEventListener('click', function () {
+            content.classList.toggle('show');
+            if (content.classList.contains('show')) {
+              span.textContent = 'VER MÁS';
+              icon.classList.add('fa-chevron-down');
+              icon.classList.remove('fa-chevron-up');
+              } else {
+                  span.textContent = 'VER MENOS';
+                  icon.classList.add('fa-chevron-up');
+                  icon.classList.remove('fa-chevron-down');
+              }
+          });
+        });
+    
