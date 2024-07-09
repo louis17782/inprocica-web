@@ -268,7 +268,7 @@ overflow: hidden;
   padding: 10px;
   border-radius: 40px;
   font-family: $font-title;
-  transition: 0.9s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .speaker-btn2 i {
@@ -529,7 +529,6 @@ footer {
       position: absolute;
       display: flex;
     }
-    
     .menu-toggle, .menu-close {
       display: none;
     }
@@ -584,9 +583,15 @@ footer {
       font-family: $font-title;
       word-spacing: 0.25em;
     }
-    #jumbotrom {
-      height: 170%;
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 120px;
     }
+    .section2 {
+        display: flex;
+        margin-left: 80px;
+      }
     #title1 {
       font-size: 80px;
       .color1 {
@@ -605,6 +610,13 @@ footer {
       padding-left: 150px;
       padding-right: 150px;
     }
+  }
+  .item1 {
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+  .item1, .show {
+    max-height: 100px;
   }
   .content-down {
     font-size: 1.5em;
@@ -791,13 +803,6 @@ footer {
       height: 150px;
       border-radius: 50%;
       font-size: 70px;
-    }
-    .item1 {
-      transition: max-height 0.5s ease;
-      overflow: hidden;
-    }
-    .item1.show {
-      max-height: 500px;
     }
 .speaker-btn {
 max-width: 400px;
