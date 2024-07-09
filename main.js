@@ -124,13 +124,13 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.addEventListener('click', function () {
         content.classList.toggle('show');
         if (content.classList.contains('show')) {
-          span.textContent = 'VER MÁS';
-          icon.classList.add('fa-chevron-down');
-              icon.classList.remove('fa-chevron-up');
+          span.textContent = 'VER MENOS';
+          icon.classList.add('fa-chevron-up');
+          icon.classList.remove('fa-chevron-down');
           } else {
-              span.textContent = 'VER MENOS';
-              icon.classList.add('fa-chevron-up');
-              icon.classList.remove('fa-chevron-down');
+              span.textContent = 'VER MÁS';
+              icon.classList.add('fa-chevron-down');
+              icon.classList.remove('fa-chevron-up');
           }
       });
     });
@@ -143,17 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth <= 768) { 
       content.classList.add('show');
     }
-        
           btn2.addEventListener('click', function () {
             content.classList.toggle('show');
             if (content.classList.contains('show')) {
-              span.textContent = 'VER MÁS';
-              icon.classList.add('fa-chevron-down');
-              icon.classList.remove('fa-chevron-up');
+              span.textContent = 'VER MENOS';
+              icon.classList.add('fa-chevron-up');
+              icon.classList.remove('fa-chevron-down');
               } else {
-                  span.textContent = 'VER MENOS';
-                  icon.classList.add('fa-chevron-up');
-                  icon.classList.remove('fa-chevron-down');
+                  span.textContent = 'VER MÁS';
+                  icon.classList.add('fa-chevron-down');
+                  icon.classList.remove('fa-chevron-up');
               }
           });
         });
