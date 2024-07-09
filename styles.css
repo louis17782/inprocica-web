@@ -264,9 +264,9 @@ header {
   margin: 15px;
   padding: 20px;
   line-height: 1.5em;
-  transition: max-height 0.5s ease;
-  overflow: hidden;
+  transition: max-height 0.9s ease;
   backdrop-filter: blur(3px);
+  overflow: hidden;
 }
 
 .item1.show {
@@ -289,7 +289,7 @@ h2 {
   padding: 10px;
   border-radius: 40px;
   font-family: Arial, Helvetica, sans-serif;
-  transition: 0.2s;
+  transition: 0.9s;
   cursor: pointer;
 }
 
@@ -336,6 +336,32 @@ h2 {
   font-size: 1.2em;
   padding-top: 20px;
   font-family: "Roboto", sans-serif;
+  transition: max-height 0.9s ease;
+  overflow: hidden;
+}
+
+.item3.show {
+  max-height: 10px;
+}
+
+.speaker-btn2 {
+  max-width: 400px;
+  font-size: 1em;
+  color: #1D1E21;
+  background-color: #FFBA1F;
+  padding: 10px;
+  border-radius: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.speaker-btn2 i {
+  color: #ec5342;
+}
+
+.speaker-btn2:hover {
+  background-color: #d3d3d3;
 }
 
 .b2 {
@@ -343,21 +369,6 @@ h2 {
   color: #FFBA1F;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-}
-
-.bottom-secundary > a {
-  font-size: 20px;
-  color: #1D1E21;
-  background-color: #FFBA1F;
-  padding: 10px;
-  border-radius: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.bottom-secundary {
-  display: flex;
-  margin-left: 10px;
-  margin-top: 20px;
 }
 
 /* section4 */
@@ -674,8 +685,14 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 0.25em;
   }
-  #jumbotrom {
-    height: 170%;
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 120px;
+  }
+  .section2 {
+    display: flex;
+    margin-left: 80px;
   }
   #title1 {
     font-size: 80px;
@@ -695,6 +712,13 @@ footer {
     font-size: 1.5em;
     padding-left: 150px;
     padding-right: 150px;
+  }
+  .item1 {
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+  .item1, .show {
+    max-height: 100px;
   }
   .content-down {
     font-size: 1.5em;
@@ -868,13 +892,6 @@ footer {
     height: 150px;
     border-radius: 50%;
     font-size: 70px;
-  }
-  .item1 {
-    transition: max-height 0.5s ease;
-    overflow: hidden;
-  }
-  .item1.show {
-    max-height: 500px;
   }
   .speaker-btn {
     max-width: 400px;
