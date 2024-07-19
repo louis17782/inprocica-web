@@ -264,13 +264,18 @@ header {
   margin: 15px;
   padding: 20px;
   line-height: 1.5em;
-  transition: max-height 0.9s ease;
+  transition: max-height 0.9s ease, padding 0.9s ease;
   backdrop-filter: blur(3px);
   overflow: hidden;
+  max-height: 0;
 }
 
 .item1.show {
-  max-height: 400px;
+  max-height: 1700px;
+}
+
+.item1-mobile {
+  min-height: 400px;
 }
 
 h2 {
@@ -281,7 +286,7 @@ h2 {
   font-size: 2rem;
 }
 
-.speaker-btn {
+.speaker_btn {
   max-width: 400px;
   font-size: 1em;
   color: #1D1E21;
@@ -336,15 +341,20 @@ h2 {
   font-size: 1.2em;
   padding-top: 20px;
   font-family: "Roboto", sans-serif;
-  transition: max-height 0.9s ease;
+  transition: max-height 0.9s ease, padding 0.9s ease;
   overflow: hidden;
+  max-height: 0;
 }
 
 .item3.show {
-  max-height: 400px;
+  max-height: 200px;
 }
 
-.speaker-btn2 {
+.item3-mobile {
+  max-height: 89px;
+}
+
+.speaker_btns {
   max-width: 400px;
   font-size: 1em;
   color: #1D1E21;
@@ -357,11 +367,11 @@ h2 {
   cursor: pointer;
 }
 
-.speaker-btn2 i {
+.speaker_btns i {
   color: #ec5342;
 }
 
-.speaker-btn2:hover {
+.speaker-btns:hover {
   background-color: #d3d3d3;
 }
 
@@ -724,8 +734,11 @@ footer {
     backdrop-filter: blur(10px);
     overflow: hidden;
   }
-  .item1, .show {
-    max-height: 100px;
+  .item1.show {
+    max-height: 200px;
+  }
+  .item1-mobile {
+    min-height: 100px;
   }
   .content-down {
     font-size: 1.5em;
