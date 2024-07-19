@@ -104,56 +104,69 @@ function moveCarouselLeft() {
   const newCounter = (counter - 1 + dots.length) % dots.length;
   moveCarouselTo(newCounter);
 }
-
-// Añadir manejadores de eventos a los puntos
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
       moveCarouselTo(index);
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const btn = document.querySelector('.speaker-btn');
-  const content = document.querySelector('.item1');
-  const span = document.getElementById('morles');
-  const icon = document.getElementById('chevron');
 
-  if (window.innerWidth <= 768) { 
-  content.classList.add('show');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.querySelector('.speaker_btn');
+  const content = document.querySelector('.item1');
+  const morles = document.getElementById('morles');
+  const chevron = document.getElementById('chevron');
+
+  function isMobileDevice() {
+    return window.innerWidth < 768;
 }
-    
-      btn.addEventListener('click', function () {
-        content.classList.toggle('show');
-        if (content.classList.contains('show')) {
-          span.textContent = 'VER MENOS';
-          icon.classList.add('fa-chevron-up');
-          icon.classList.remove('fa-chevron-down');
-          } else {
-              span.textContent = 'VER MÁS';
-              icon.classList.add('fa-chevron-down');
-              icon.classList.remove('fa-chevron-up');
-          }
-      });
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      const btn2= document.querySelector('.speaker-btn2');
-      const content = document.querySelector('.item3');
-      const span = document.getElementById('morles2');
-      const icon = document.getElementById('chevron2');
-    
-      if (window.innerWidth <= 768) { 
-      content.classList.add('show');
-    }
-          btn2.addEventListener('click', function () {
-            content.classList.toggle('show');
-            if (content.classList.contains('show')) {
-              span.textContent = 'VER MENOS';
-              icon.classList.add('fa-chevron-up');
-              icon.classList.remove('fa-chevron-down');
-              } else {
-                  span.textContent = 'VER MÁS';
-                  icon.classList.add('fa-chevron-down');
-                  icon.classList.remove('fa-chevron-up');
-              }
-          });
-        });
-    
+if (isMobileDevice()) {
+    content.classList.add('item1-mobile');
+}
+
+  toggleButton.addEventListener('click', function () {
+    content.classList.toggle('full');
+      if (content.classList.contains('full')) {
+          content.classList.remove('show');
+          content.classList.add('hidden-content');
+          morles.textContent = 'VER MÁS ';
+          chevron.classList.remove('fa-chevron-up');
+          chevron.classList.add('fa-chevron-down');
+      } else {
+          content.classList.remove('hidden-content');
+          content.classList.add('show');
+          morles.textContent = 'VER MENOS ';
+          chevron.classList.remove('fa-chevron-down');
+          chevron.classList.add('fa-chevron-up');
+      }
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.querySelector('.speaker_btns');
+  const content = document.querySelector('.item3');
+  const morles = document.getElementById('morless');
+  const chevron = document.getElementById('chevrons');
+
+  function isMobileDevice() {
+    return window.innerWidth < 768;
+}
+if (isMobileDevice()) {
+    content.classList.add('item3-mobile');
+}
+
+  toggleButton.addEventListener('click', function () {
+    content.classList.toggle('full');
+      if (content.classList.contains('full')) {
+          content.classList.remove('show');
+          content.classList.add('hidden-content');
+          morles.textContent = 'VER MÁS ';
+          chevron.classList.remove('fa-chevron-up');
+          chevron.classList.add('fa-chevron-down');
+      } else {
+          content.classList.remove('hidden-content');
+          content.classList.add('show');
+          morles.textContent = 'VER MENOS ';
+          chevron.classList.remove('fa-chevron-down');
+          chevron.classList.add('fa-chevron-up');
+      }
+  });
+});
