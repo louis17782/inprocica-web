@@ -763,13 +763,12 @@ footer {
   }
   .item1 {
     backdrop-filter: blur(10px);
-    overflow: hidden;
   }
   .item1.show {
-    max-height: 200px;
+    max-height: 700px;
   }
   .item1-mobile {
-    min-height: 100px;
+    min-height: 250px;
   }
   .content-down {
     font-size: 1.5em;
