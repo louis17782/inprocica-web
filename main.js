@@ -170,3 +170,24 @@ if (isMobileDevice()) {
       }
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.flex-container, .section2');
+  elements.forEach(element => {
+      element.style.animationDelay = "0.5s";
+  });
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.section-oil, .content2');
+
+  function checkVisibility() {
+      elements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+              element.classList.add('visible');
+          }
+      });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  checkVisibility(); // Ejecuta al cargar la página
+});

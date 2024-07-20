@@ -246,6 +246,37 @@ header {
   width: 250px;
 }
 
+.background {
+  overflow: hidden;
+}
+
+.flex-container, .section2 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#back2 {
+  overflow: hidden;
+}
+
+.section-oil, .content2 {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+.section-oil.visible, .content2.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .content1 {
   display: flex;
   flex-direction: column;
@@ -347,7 +378,7 @@ h2 {
 }
 
 .item3.show {
-  max-height: 200px;
+  max-height: 400px;
 }
 
 .item3-mobile {
@@ -732,13 +763,12 @@ footer {
   }
   .item1 {
     backdrop-filter: blur(10px);
-    overflow: hidden;
   }
   .item1.show {
-    max-height: 200px;
+    max-height: 700px;
   }
   .item1-mobile {
-    min-height: 100px;
+    min-height: 250px;
   }
   .content-down {
     font-size: 1.5em;
