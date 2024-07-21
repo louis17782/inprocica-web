@@ -23,3 +23,6 @@ function showMenu() {
       navLinks.classList.replace('nav-transitioning', 'hidden');
     }, 500)
   };
+  function closeMenuAfterNavigation() {
+    hideMenu();
+  }
