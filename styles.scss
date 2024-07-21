@@ -274,6 +274,12 @@ header {
   flex-direction: column;
   margin-top: 250px;
 }
+.picture {
+  background: linear-gradient(to bottom, rgba(0, 0, .3, .6), rgba(0, 0, 0, 0)), url("./assets/images/petroleo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 .formulario {
   width: 350px;
   margin: 0 auto;
@@ -331,7 +337,7 @@ iframe {
   padding: 20px;
 }
 h6 {
-  color: $darkblack;
+  color: $offwhite;
   font-size: 2em;
   text-align: center;
   margin: 20px;
