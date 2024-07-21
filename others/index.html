@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="picture" lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Escribir algo para el seo">
+      <title>Inprocica</title>
+      <link rel="stylesheet" href="../styles.css">
+      <link rel="icon" type="image/png" sizes="64x64" href="/imagenes/image.png"> <!--para favicon-->
+      <script src="https://kit.fontawesome.com/f8b4998ade.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+      <button type="button" class="menu-toggle" onclick="showMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="navbar" class="hidden">
+        <div id="navlinks" class="navlinks-container hidden">
+            <a class="nav-logo" href="./index.html">
+              <img src="../assets/images/image.png" alt="logo">
+            </a>
+          <button
+            type="button"
+            title="Show Menu"
+            onclick="hideMenu()"
+            class="menu-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="navlinks">
+            <li><a class="nav-link yellow" href="../index.html" rel="noreferrer">Inicio</a></li>
+            <li><a class="nav-link" href="../index.html" rel="noreferrer">Productos</a></li>
+            <li><a class="nav-link" href="../index.html" rel="noreferrer">Nosotros</a></li>
+            <li><a class="nav-link" href="./others/index.html" rel="noreferrer">Contacto</a></li>
+          </ul>
+          <ul class="number">
+            <li><i class="fa-solid fa-phone"></i><a class="number2" href="" rel="noreferrer">04127924818</a></li>
+            <li><a href="https://wa.me/584127924818" rel="noreferrer" class="fullyellow">Llamanos</a></li>
+          </ul>
+        </div>
+      </nav>
+      <header id="header">
+        <a href="./index.html" class="logo">
+          <img src="../assets/images/image.png" alt="logo">
+        </a>
+      </header>
+  <main>
+    <div class="contenedor1">
+      <div class="form1">
+       <h6>Contactanos</h6>
+        <div class="formulario">
+          <form action="/submit-contacto" method="post">
+              <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+              </div>
+              <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
+              </div>
+              <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+              </div>
+                <div class="campo">
+                  <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+        <div class="form1">
+              <h6>Nuestra ubicaci&oacute;n</h6>
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15714.379946778201!2d-69.2584029!3d10.050241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875d4099135891%3A0xc12880c8fd2b5c68!2sINPROCICA!5e0!3m2!1ses-419!2sve!4v1721583247224!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+          </div>
+    </div>
+    <section class="content-section">
+        <div>
+            <a href="./index.html">
+              <img src="../assets/images/image.png" class="logo2" alt="#">
+            </a>
+            <div class="linea2"></div>
+          <p class="textsection">Inprocica International LLC
+            Direcciòn de Estados Unidos: 854 DAWSON ST
+          HOLLYWOOD, FL 33023</p>
+       </div>
+          <div>
+            <h5 class="contact-title">Nuestros enlaces</h5>
+              <ul>
+            <li><a id="fo" href="./productos/index.html">Productos</a></li>
+            <li><a id="fo" href="./nosotros/index.html">Nosotros</a></li>
+            <li><a id="fo" href="./others/">Contacto</a></li>
+              </ul>
+          </div>
+      </div>
+      <div>
+        <div class="contact">
+          <h5 class="contact-title">Contactanos</h5>
+          <p class="letter">📍 Ctra Vieja a Yaritagua nro casa Hacienda Santa Elena s/n sector el Carabali, Cabudare, Lara -Venezuela</p>
+          <p class="letter">info@inprocica.com</p>
+          <p class="letter">+58 414 7395134</p>
+        </div>
+      </div>
+    </div>
+      </section>
+      <footer>
+        <div class="content-footer">
+            <p class="copy">© Inprocica 2024</p>
+            <a class="content-politic" href="./index.html">Politicas de privacidad</a>
+            <div class="contact-link">
+              <a href="https://www.instagram.com/inprocica/" target="_blank" class="btn contact-details">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+         </div>
+         <div class="whatsapp-btn">
+          <a href="https://wa.me/584127924818" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="color: #119213;"></i>
+          </a>
+        </div>
+        </footer>
+      </main>
+<script src="../others/contact.js"></script>
+</body>
+</html>

@@ -349,6 +349,88 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 
+.contenedor1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.picture {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("./assets/images/petroleo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.formulario {
+  width: 350px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 4px solid #020f25;
+  background-color: #fff;
+}
+
+.campo {
+  margin-bottom: 30px;
+}
+
+label {
+  color: #222;
+  font-family: "Arial", sans-serif;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #020f25;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 8px;
+  border: 2px solid #020f25;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+}
+
+button[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #425f91;
+  border-radius: 5px;
+  background-color: #091F44;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #eee8d6;
+}
+
+iframe {
+  float: none;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+}
+
+h6 {
+  color: #eee8d6;
+  font-size: 2em;
+  text-align: center;
+  margin: 20px;
+}
+
 .section-oil {
   display: flex;
   flex-direction: column;
@@ -764,8 +846,8 @@ footer {
   .item1 {
     backdrop-filter: blur(10px);
   }
-  .item1.show {
-    max-height: 700px;
+  .item1, .show {
+    max-height: 100px;
   }
   .item1-mobile {
     min-height: 250px;
@@ -942,6 +1024,24 @@ footer {
     height: 150px;
     border-radius: 50%;
     font-size: 70px;
+  }
+  .contenedor1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .form1 {
+    flex: 1;
+  }
+  .mapa, .formulario {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .formulario {
+    width: 500px;
+  }
+  .mapa {
+    margin-top: 90px;
+    width: 800px;
   }
 }
 
