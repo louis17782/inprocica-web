@@ -287,7 +287,7 @@ header {
   padding: 100px;
 }
 
-.item1 {
+#item1 {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
@@ -298,15 +298,11 @@ header {
   transition: max-height 0.9s ease, padding 0.9s ease;
   backdrop-filter: blur(3px);
   overflow: hidden;
-  max-height: 0;
+  max-height: 400px;
 }
 
-.item1.show {
-  max-height: 1700px;
-}
-
-.item1-mobile {
-  min-height: 400px;
+#item1.show {
+  max-height: 1100px;
 }
 
 h2 {
@@ -319,6 +315,7 @@ h2 {
 
 .speaker_btn {
   max-width: 400px;
+  margin: 15px;
   font-size: 1em;
   color: #1D1E21;
   background-color: #FFBA1F;
@@ -448,7 +445,7 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-.item3 {
+#item3 {
   margin: 0px;
   color: #eee8d6;
   font-size: 1.2em;
@@ -459,33 +456,8 @@ h6 {
   max-height: 0;
 }
 
-.item3.show {
+#item3.show {
   max-height: 400px;
-}
-
-.item3-mobile {
-  max-height: 89px;
-}
-
-.speaker_btns {
-  max-width: 400px;
-  font-size: 1em;
-  color: #1D1E21;
-  background-color: #FFBA1F;
-  padding: 10px;
-  margin-top: 20px;
-  border-radius: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: 0.9s;
-  cursor: pointer;
-}
-
-.speaker_btns i {
-  color: #ec5342;
-}
-
-.speaker-btns:hover {
-  background-color: #d3d3d3;
 }
 
 .b2 {
@@ -837,20 +809,17 @@ footer {
     padding-left: 150px;
     padding-right: 150px;
   }
-  .item3 {
+  #item3 {
     overflow: hidden;
   }
-  .item3, .show {
+  #item3, .show {
     max-height: 40px;
   }
-  .item1 {
+  #item1 {
     backdrop-filter: blur(10px);
   }
-  .item1, .show {
+  #item1, .show {
     max-height: 100px;
-  }
-  .item1-mobile {
-    min-height: 250px;
   }
   .content-down {
     font-size: 1.5em;
