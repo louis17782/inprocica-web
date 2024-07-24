@@ -212,7 +212,7 @@ header {
         background-color: rgba(16, 16, 70, 0.425);
         padding: 100px;
       }
-      .item1 {
+      #item1 {
         color: $whitepure;
         font-family: $font-title;
         font-size: 1.5rem;
@@ -223,14 +223,11 @@ header {
         transition: max-height 0.9s ease, padding 0.9s ease;
         backdrop-filter: blur(3px);
         overflow: hidden;
-        max-height: 0;
+        max-height: 400px;
       }
-      .item1.show {
-        max-height: 1700px;
+      #item1.show {
+        max-height: 1100px;
       }
-      .item1-mobile {
-        min-height: 400px;
-    }
       h2 {
         text-align: center;
         color: $whitepure;
@@ -240,6 +237,7 @@ header {
       }
 .speaker_btn {
   max-width: 400px;
+  margin: 15px;
   font-size: 1em;
   color: $darkblack;
   background-color: $yellow;
@@ -358,7 +356,7 @@ color: $offwhite;
 font-size: 1.2em;
 font-family: $font-text;
 }
-.item3 {
+#item3 {
 margin: 0px;
 color: $offwhite;
 font-size: 1.2em;
@@ -368,29 +366,8 @@ transition: max-height 0.9s ease, padding 0.9s ease;
 overflow: hidden;
 max-height: 0;
 }
-.item3.show {
+#item3.show {
   max-height: 400px;
-}
-.item3-mobile {
-  max-height: 89px;
-}
-.speaker_btns {
-  max-width: 400px;
-  font-size: 1em;
-  color: $darkblack;
-  background-color: $yellow;
-  padding: 10px;
-  margin-top: 20px;
-  border-radius: 40px;
-  font-family: $font-title;
-  transition: 0.9s;
-  cursor: pointer;
-}
-.speaker_btns i {
-  color: #ec5342;
-}
-.speaker-btns:hover {
-  background-color: #d3d3d3;
 }
 .b2 {
 margin-left: 0px;
@@ -727,22 +704,19 @@ footer {
       }
     }
     //bottom2
-    .item3 {
+    #item3 {
     overflow: hidden;
     }
-    .item3, .show {
+    #item3, .show {
     max-height: 40px;
     }
     //bottom1
-  .item1 {
+  #item1 {
     backdrop-filter: blur(10px);
   }
-  .item1, .show {
+  #item1, .show {
     max-height: 100px;
   }
-  .item1-mobile {
-    min-height: 250px;
-}
   .content-down {
     font-size: 1.5em;
     padding-left: 150px;
