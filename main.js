@@ -110,66 +110,22 @@ dots.forEach((dot, index) => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.querySelector('.speaker_btn');
-  const content = document.querySelector('.item1');
-  const morles = document.getElementById('morles');
-  const chevron = document.getElementById('chevron');
+const toggleContentVisibility = (event) => {
+const button = event.currentTarget;
+const sibling = button.previousElementSibling;
+const [morles,icon] = button.children;
 
-  function isMobileDevice() {
-    return window.innerWidth < 768;
-}
-if (isMobileDevice()) {
-    content.classList.add('item1-mobile');
-}
-
-  toggleButton.addEventListener('click', function () {
-    content.classList.toggle('full');
-      if (content.classList.contains('full')) {
-          content.classList.remove('show');
-          content.classList.add('hidden-content');
-          morles.textContent = 'VER MÁS ';
-          chevron.classList.remove('fa-chevron-up');
-          chevron.classList.add('fa-chevron-down');
-      } else {
-          content.classList.remove('hidden-content');
-          content.classList.add('show');
-          morles.textContent = 'VER MENOS ';
-          chevron.classList.remove('fa-chevron-down');
-          chevron.classList.add('fa-chevron-up');
-      }
-  });
-});
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.querySelector('.speaker_btns');
-  const content = document.querySelector('.item3');
-  const morles = document.getElementById('morless');
-  const chevron = document.getElementById('chevrons');
-
-  function isMobileDevice() {
-    return window.innerWidth < 768;
-}
-if (isMobileDevice()) {
-    content.classList.add('item3-mobile');
-}
-
-  toggleButton.addEventListener('click', function () {
-    content.classList.toggle('full');
-      if (content.classList.contains('full')) {
-          content.classList.remove('show');
-          content.classList.add('hidden-content');
-          morles.textContent = 'VER MÁS ';
-          chevron.classList.remove('fa-chevron-up');
-          chevron.classList.add('fa-chevron-down');
-      } else {
-          content.classList.remove('hidden-content');
-          content.classList.add('show');
-          morles.textContent = 'VER MENOS ';
-          chevron.classList.remove('fa-chevron-down');
-          chevron.classList.add('fa-chevron-up');
-      }
-  });
-});
+if (morles.innerText === 'VER MÁS') {
+            morles.innerText = 'VER MENOS';
+            sibling.classList.add('show');
+            icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+            morles.innerText = 'VER MÁS';
+            sibling.classList.remove('show');
+            icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+          }
+          console.log(morles.innerText);
+   };
 document.addEventListener("DOMContentLoaded", function() {
   const elements = document.querySelectorAll('.flex-container, .section2');
   elements.forEach(element => {
@@ -189,5 +145,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.addEventListener('scroll', checkVisibility);
-  checkVisibility(); // Ejecuta al cargar la página
+  checkVisibility();
 });
