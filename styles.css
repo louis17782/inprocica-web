@@ -421,7 +421,7 @@ iframe {
   padding: 20px;
 }
 
-h6 {
+h6, .usa {
   color: #eee8d6;
   font-size: 2em;
   text-align: center;
