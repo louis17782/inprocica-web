@@ -48,22 +48,22 @@
       <div class="form1">
        <h6>Contáctanos</h6>
         <div class="formulario">
-          <form action="/submit-contacto" method="post">
+          <form id="contact-form" action="/" method="post">
               <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
               </div>
               <div class="campo">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
               </div>
               <div class="campo">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Escribe tu número de teléfono" required>
               </div>
                 <div class="campo">
-                  <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                  <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje"></textarea>
               </div>
               <button type="submit">Enviar</button>
             </form>
@@ -122,5 +122,6 @@
         </footer>
       </main>
 <script src="../others/contact.js"></script>
+<script type="module" src="../others/ValidationForm.js"></script>
 </body>
 </html>

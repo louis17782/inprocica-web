@@ -1,0 +1,69 @@
+const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+    const phone = form.phone.value;
+
+    if (!name || !email || !message || !phone) {
+      alert('⚠️ Por favor, completa todos los campos del formulario.');
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert('⚠️ Por favor, ingresa un correo electrónico válido.');
+      return;
+    }
+
+    if (message.length < 10) {
+      alert('⚠️ El mensaje debe tener al menos 10 caracteres.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+          subject: `Nuevo mensaje de ${name}`,
+          text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`,
+        })
+      });
+
+      const result = await response.text();
+      if (response.ok) {
+        const confirmation = document.createElement('div');
+        confirmation.innerHTML = `
+        <div id="confirmation-message" style="
+          background-color: #eee8d6;
+          color: #020f25;
+          padding: 15px;
+          margin-top: 20px;
+          border: 1px solid #002057;
+          border-radius: 5px;
+          font-family: Arial, sans-serif;
+          animation: fadeIn 0.5s ease-in-out;
+          ">
+          ✅ ¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.
+        </div>
+        `;
+        form.parentElement.appendChild(confirmation);
+        setTimeout(() => {
+          confirmation.remove();
+        }, 5000);
+        form.reset();
+      } else {
+        alert('❌ Error al enviar el mensaje: ' + result);
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      alert('⚠️ Hubo un problema al enviar el mensaje');
+    }
+  });
